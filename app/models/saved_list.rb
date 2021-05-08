@@ -1,0 +1,2 @@
+class SavedList < ApplicationRecord
+end
