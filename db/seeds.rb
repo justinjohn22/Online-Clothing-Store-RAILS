@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #Women Items
+Product.delete_all
 product1 = Product.create({:name=>"Top", :price => 30.50,:collection_type=>"women"})
 product2 = Product.create({:name=>"Skirt", :price => 17.50, :collection_type=>"women"})
 product3 = Product.create({:name=>"Hat", :price => 5.50, :collection_type=>"women"})
