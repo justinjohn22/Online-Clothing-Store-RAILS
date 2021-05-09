@@ -2,5 +2,10 @@
 
 
 <% @products.each do |product| %>
-  <p>Name: <%= product.name %>; unit price of <%= number_to_currency(product.price) %></p>
+  <div>
+    <%= image_tag(product.image_url, width: '100px', height: '200px') %>
+  </div>
+  <div>
+    <p>Name: <%= product.name %>; unit price of <%= number_to_currency(product.price) %></p>
+  </div>
 <% end%>

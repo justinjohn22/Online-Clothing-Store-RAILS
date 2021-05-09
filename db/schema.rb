@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20210508115515) do
     t.string "name"
     t.decimal "price"
     t.string "collection_type"
+    t.string "image_url"
   end
 
   create_table "saved_lists", force: :cascade do |t|
