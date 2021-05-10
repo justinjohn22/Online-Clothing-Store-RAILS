@@ -1,0 +1,10 @@
+<h2>Saved List </h2>
+
+<% @save_list.saved_items.each do |saved_item| %> 
+ <div>
+    <%= image_tag(saved_item.image_url, width: '100px', height: '200px') %>
+  </div>
+  <div>
+    <p>Name: <%= saved_item.name %>; unit price of <%= number_to_currency(saved_item.price) %></p>
+  </div>
+<% end%>

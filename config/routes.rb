@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'products/kids'
   get 'products/newins'
 
+  post 'saved_items' => "saved_items#create"
+
   resources :products
 end
 

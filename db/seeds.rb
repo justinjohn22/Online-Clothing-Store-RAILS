@@ -27,3 +27,5 @@ product10 = Product.create({:name=>"Underwear", :price => 8.50,:collection_type=
 product11 = Product.create({:name=>"Trainers", :price => 100.00, :collection_type=>"new-ins",:image_url=>"https://clothing-images1.s3.amazonaws.com/trainers.png", :date_arrived=>"2020-12-5"})
 product12 = Product.create({:name=>"Fedora", :price => 32.00, :collection_type=>"new-ins",:image_url=>"https://clothing-images1.s3.amazonaws.com/fedora.png", :date_arrived=>"2020-12-5"})
 
+SavedList.destroy_all
+
