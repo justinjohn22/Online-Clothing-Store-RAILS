@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   private 
      def current_saved_list
       if session[:saved_list_id]
-        saved_list = Cart.find_by(:id => session[:saved_list_id])
+        saved_list = SavedList.find_by(:id => session[:saved_list_id])
         if saved_list.present?
           @current_saved_list = saved_list
         else

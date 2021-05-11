@@ -18,12 +18,13 @@ ActiveRecord::Schema.define(version: 20210510072020) do
     t.string "collection_type"
     t.string "image_url"
     t.date "date_arrived"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "saved_items", force: :cascade do |t|
-    t.integer "productID"
+    t.integer "product_id"
     t.integer "saved_list_id"
-    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

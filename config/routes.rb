@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get 'products/kids'
   get 'products/newins'
 
+  get 'saved_lists/:id' => "saved_lists#show", as: "saved_list"
+  delete 'saved_lists/:id' => "saved_lists#destroy"
+
   post 'saved_items' => "saved_items#create"
 
   resources :products
