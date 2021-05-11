@@ -17,7 +17,7 @@ class SavedItemsController < ApplicationController
           @saved_item.save
         end
         # Save and redirect to cart show path
-        # redirect_to saved_list_path(@current_saved_list)
+        redirect_to root_path
     end
     private 
         def line_item_params
