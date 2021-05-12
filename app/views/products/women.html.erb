@@ -1,13 +1,28 @@
-<h2>Women Products</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+  <body>
+    <header class="container">
+      <div class="navbar-header">
+        <h3>Womens</h3>
+      </div> 
+    </header>
+
+    <div class="container-fluid"> 
+      <% @products.each do |product| %>
+        <div>
+          <%= link_to image_tag(product.image_url, width: '100px', height: '200px'), saved_items_path(:product_id => product.id), method: :post %>
+        </div>
+        <div>
+          <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
+            <p>Name: <%= product.name %>; unit price of <%= number_to_currency(product.price) %></p>
+          <% end %>
+        </div>
+      <% end%>
+    </div>
+  </body>
+
+</html>
 
 
-<% @products.each do |product| %>
-  <div>
-    <%= link_to image_tag(product.image_url, width: '100px', height: '200px'), saved_items_path(:product_id => product.id), method: :post %>
-  </div>
-  <div>
-    <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
-      <p>Name: <%= product.name %>; unit price of <%= number_to_currency(product.price) %></p>
-    <% end %>
-  </div>
-<% end%>
+
