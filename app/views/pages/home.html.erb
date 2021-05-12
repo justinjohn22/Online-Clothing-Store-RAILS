@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <body>
+  <body class="body">
     
     <div class="title-container">
       <h3>Home</h3>
     </div> 
     
     
-    <div>
-        <%= link_to image_tag(@random_product.image_url, width: '200px', height: '200px'), saved_items_path(:product_id => @random_product.id), method: :post %>
+    <div class="slide-show">
+        <%= link_to image_tag(@random_product.image_url, width: '350px', height: '350px'), saved_items_path(:product_id => @random_product.id), method: :post %>
         <%= link_to saved_items_path(:product_id => @random_product.id), method: :post do %>
         <p>Name: <%= @random_product.name %>; unit price of <%= number_to_currency(@random_product.price) %></p>
         <% end %>
         <%= button_to "+", saved_items_path(:product_id => @random_product.id), method: :post%>
     </div>
     <div>
-        <h2>Popular</h2>
-        <% @popular_products.each do |product| %>
-        <div>
-            <%= link_to image_tag(product.image_url, width: '200px', height: '200px'), saved_items_path(:product_id => product.id), method: :post %>
+        <div class="popular-container">
+          <h3>Popular</h3> 
+        </div> 
+        <div class="popular">
+          <% @popular_products.each do |product| %>
+          <div>
+              <div class="image-popular">
+                <%=link_to image_tag(product.image_url, width: '200px', height: '200px'), saved_items_path(:product_id => product.id), method: :post %>
+                <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
+                <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
+              </div>
+              <% end %>
+          </div>
+          <% end%>
         </div>
-        <div>
-            <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
-            <p>Name: <%= product.name %>; unit price of <%= number_to_currency(product.price) %></p>
-            <% end %>
-        </div>
-        <% end%>
     </div>
     <br>
       <div>
           <%= button_to "saved list", saved_list_path(@current_saved_list), method: :get %>
       </div>
     <br>
+
+    <hr class="solid">
+
     <div>
-        <div class="title-container">
+        <div class="collections-container">
           <h3>Collections</h3>  
-          <%= link_to "see all+", products_path, class: "btn btn-link btn-sm" %>  
+          <p>
+            <%= link_to "see all+", products_path, :class => "btn" %>  
+          </p>
         </div>
-      
-        <%= link_to "women", '/products/women', class: "btn btn-default" %>
-        <%= link_to "men", '/products/men', class: "btn btn-default" %>
-        <%= link_to "kids", '/products/kids', class: "btn btn-default" %>
-        <%= link_to "new-ins", '/products/newins', class: "btn btn-default" %>
+
+        <div class="button-for-women"> 
+          <%= link_to "women", '/products/women', :class => "btn_women" %>
+        </div>
+        <div class="button-group-main">
+          <div class="button-group-minor">
+            <div class="button-for-men">
+              <%= link_to "men", '/products/men',:class => "btn_men" %>
+            </div>
+            <br>
+            <div class="button-for-kids">
+              <%= link_to "kids", '/products/kids', :class => "btn_kids" %>
+            </div>
+          </div>
+          <div class="button-for-newins">
+            <%= link_to "new-ins", '/products/newins', :class => "btn_newins" %>
+          </div>
+        </div>    
     </div>
     <br>
     <div>
