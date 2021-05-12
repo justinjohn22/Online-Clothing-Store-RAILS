@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <body>
-    <header class="container">
-      <div class="navbar-header">
-        <h3>Home</h3>
-      </div> 
-    </header>
+    
+    <div class="title-container">
+      <h3>Home</h3>
+    </div> 
+    
     
     <div>
         <%= link_to image_tag(@random_product.image_url, width: '200px', height: '200px'), saved_items_path(:product_id => @random_product.id), method: :post %>
@@ -28,16 +28,19 @@
         <% end%>
     </div>
     <br>
+      <div>
+          <%= button_to "saved list", saved_list_path(@current_saved_list), method: :get %>
+      </div>
     <div>
-        <%= button_to "saved list", saved_list_path(@current_saved_list), method: :get %>
-    </div>
-    <div>
-        <h2>Collections</h2>
-        <%= button_to "see all+", products_path, method: :get %>
-        <%= button_to "women", '/products/women', method: :get %>
-        <%= button_to "men", '/products/men', method: :get %>
-        <%= button_to "kids",'/products/kids', method: :get %>
-        <%= button_to "new-ins", '/products/newins', method: :get %>
+        <div class="container list-top">
+          <h3>Collections</h3>  
+          <%= link_to "see all+", products_path, class: "btn btn-link btn-sm" %>  
+        </div>
+      
+        <%= link_to "women", '/products/women', class: "btn btn-default" %>
+        <%= link_to "men", '/products/men', class: "btn btn-default" %>
+        <%= link_to "kids", '/products/kids', class: "btn btn-default" %>
+        <%= link_to "new-ins", '/products/newins', class: "btn btn-default" %>
     </div>
 
   </body>
