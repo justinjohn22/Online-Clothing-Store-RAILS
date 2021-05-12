@@ -3,9 +3,14 @@
   <body class="body">
     
     <div class="title-container">
-      <h3>Home</h3>
+      <p><b>Home</b></p>
     </div> 
     
+    <div class="menu-buttons">
+      <%= link_to "menu", '/products/women', :class => "menu-btn-main" %>
+      <%= link_to "saved list", saved_list_path(@current_saved_list), :class => "menu-btn-saved" %>
+      <%= link_to "search", '/products/women', :class => "menu-btn-search" %>
+    </div>
     
     <div class="slide-show">
         <%= link_to image_tag(@random_product.image_url, width: '350px', height: '350px'), saved_items_path(:product_id => @random_product.id), method: :post %>
@@ -14,15 +19,21 @@
         <% end %>
         <%= button_to "+", saved_items_path(:product_id => @random_product.id), method: :post%>
     </div>
+
+    <hr class="solid">
+
     <div>
-        <div class="popular-container">
+        <div class="see-all-container">
           <h3>Popular</h3> 
+          <p>
+            <%= link_to "see all+", products_path, :class => "btn" %>  
+          </p>
         </div> 
         <div class="popular">
           <% @popular_products.each do |product| %>
           <div>
               <div class="image-popular">
-                <%=link_to image_tag(product.image_url, width: '200px', height: '200px'), saved_items_path(:product_id => product.id), method: :post %>
+                <%=link_to image_tag(product.image_url, width: '200px', height: '250px'), saved_items_path(:product_id => product.id), method: :post %>
                 <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
                 <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
               </div>
@@ -32,15 +43,11 @@
         </div>
     </div>
     <br>
-      <div>
-          <%= button_to "saved list", saved_list_path(@current_saved_list), method: :get %>
-      </div>
-    <br>
 
     <hr class="solid">
 
     <div>
-        <div class="collections-container">
+        <div class="see-all-container">
           <h3>Collections</h3>  
           <p>
             <%= link_to "see all+", products_path, :class => "btn" %>  
@@ -67,7 +74,11 @@
     </div>
     <br>
     <div>
-      <h3>Newsletter</h3>
+      <div class="see-all-container">
+          <h3>Newsletter</h3>  
+          
+      </div>
+      
       <p>signup with our newsletter...</p>
       <%= form_with scope: :user, url:  users_path, local: true do |f| %>
         <p>
