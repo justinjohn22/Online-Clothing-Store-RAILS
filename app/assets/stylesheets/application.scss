@@ -1,2 +1,15 @@
 @import "bootstrap-sprockets";
-@import "bootstrap"
+@import "bootstrap";
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    h3 {
+        margin: 0;
+    }
+}

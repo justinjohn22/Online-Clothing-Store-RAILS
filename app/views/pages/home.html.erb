@@ -31,8 +31,9 @@
       <div>
           <%= button_to "saved list", saved_list_path(@current_saved_list), method: :get %>
       </div>
+    <br>
     <div>
-        <div class="container list-top">
+        <div class="title-container">
           <h3>Collections</h3>  
           <%= link_to "see all+", products_path, class: "btn btn-link btn-sm" %>  
         </div>
@@ -42,6 +43,7 @@
         <%= link_to "kids", '/products/kids', class: "btn btn-default" %>
         <%= link_to "new-ins", '/products/newins', class: "btn btn-default" %>
     </div>
+    <br>
 
   </body>
 </html>
