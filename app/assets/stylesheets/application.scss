@@ -3,10 +3,33 @@
 
 .body {
     background-color: rgba(238, 239, 240, 0.801);
-
+}
+.menu-buttons{
+    
+}
+.menu-btn-main {
+    padding-left: 15px;
 }
 
-.collections-container {
+.menu-btn-saved {
+    padding-right: 15px;
+    padding-left: 300px;
+}
+
+.slide-show {
+   padding: 15px;
+   
+}
+
+.title-container {
+    text-align: center;
+    padding: 15px;
+    p {
+        font-size: x-large;
+    }
+}
+
+.see-all-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
