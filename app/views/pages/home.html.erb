@@ -13,11 +13,13 @@
     </div>
     
     <div class="slide-show">
-        <%= link_to image_tag(@random_product.image_url, width: '455px', height: '400px', class: 'fit-image'), saved_items_random_path(:product_id => @random_product.id), method: :post %>
+        <%= link_to image_tag(@random_product.image_url, width: '455px', height: '400px', class: 'images-slide-show'), saved_items_random_path(:product_id => @random_product.id), method: :post %>
         <%= link_to saved_items_random_path(:product_id => @random_product.id), method: :post do %>
-        <p>Name: <%= @random_product.name %>; unit price of <%= number_to_currency(@random_product.price) %></p>
-        <% end %>
-        <%= button_to "+", saved_items_random_path(:product_id => @random_product.id), method: :post%>
+        <div class="slide-show-div">
+          <p><%= @random_product.name %><br><%= number_to_currency(@random_product.price) %></p>
+          <% end %>
+          <%= button_to "+", saved_items_random_path(:product_id => @random_product.id), method: :post%>
+        </div>
     </div>
 
     <hr class="solid">
@@ -88,9 +90,11 @@
             <% end %>
           </div>
         <% end %>
+    
         <p>
-          <%= f.text_field :email, placeholder: 'example@student.rmit.edu.au'%>
+          <%= f.text_field :email, placeholder: 'Enter your Email', :class => "text-field-newsletter"%>
         </p>
+        
         <p>
           <%= f.submit%>
         </p>

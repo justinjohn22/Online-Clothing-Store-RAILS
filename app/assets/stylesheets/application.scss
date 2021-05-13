@@ -12,15 +12,19 @@
     padding-left: 15px;
 }
 
-.menu-btn-saved {
+.menu-btn-saved { 
     padding-right: 15px;
     padding-left: 300px;
 }
 
 .slide-show {
    padding: 15px;
-   
 }
+
+.images-slide-show {
+    object-fit: cover;
+}
+
 
 .fit-image {
     object-fit: cover;
@@ -32,6 +36,11 @@
     p {
         font-size: x-large;
     }
+}
+
+.text-field-newsletter {
+    border: none;
+    width: fit-content;
 }
 
 .see-all-container {
