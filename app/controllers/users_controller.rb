@@ -26,7 +26,7 @@ class UsersController < ApplicationController
       NewsletterNotifierMailer.send_newsletter_email(@user).deliver
       redirect_to(@user, :notice => 'Newsletter email accepted')
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 

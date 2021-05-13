@@ -69,9 +69,16 @@
     <div>
       <h3>Newsletter</h3>
       <p>signup with our newsletter...</p>
-      <%= form_with scope: :user, url:  users_path, local: true do |f| %>
+      <%=form_for :user, url: users_path do |f| %>
+        <% if @user.errors.any? %>
+          <div class="alert alert-danger">
+            <% @user.errors.full_messages.each do |message| %>
+              <div><%= message %></div>
+            <% end %>
+          </div>
+        <% end %>
         <p>
-          <%= f.text_field :email%>
+          <%= f.text_field :email, placeholder: 'example@student.rmit.edu.au'%>
         </p>
         <p>
           <%= f.submit%>
