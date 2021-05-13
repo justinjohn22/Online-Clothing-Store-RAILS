@@ -7,6 +7,7 @@
 .menu-buttons{
     
 }
+
 .menu-btn-main {
     padding-left: 15px;
 }
@@ -19,6 +20,10 @@
 .slide-show {
    padding: 15px;
    
+}
+
+.fit-image {
+    object-fit: cover;
 }
 
 .title-container {
@@ -76,6 +81,7 @@
     height: 100px;
     align-items:flex-end;
     margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
 }
 
 .btn_men {
@@ -84,6 +90,7 @@
     display: flex;
     height: 100px;
     width: 215px;
+    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
 }
 
 .btn_kids {
@@ -91,6 +98,7 @@
     background-color: rgb(255, 255, 255);
     display: flex;
     height: 100px;
+    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
 }
 
 .btn_newins {
@@ -99,6 +107,7 @@
     display: flex;
     height: 220px;
     width: 215px;
+    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
 }
 
 
