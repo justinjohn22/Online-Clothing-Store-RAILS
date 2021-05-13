@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users, only: [:show,:index,:new,:create]
+
   root 'pages#home'
 
   #Collection re-directed pages
@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   post 'saved_items' => 'saved_items#create'
   post 'saved_items_random' => 'saved_items#create_random'
+
+  post 'users' => 'users#create'
+
   resources :products
 end
 
