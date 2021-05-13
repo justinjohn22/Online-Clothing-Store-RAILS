@@ -5,8 +5,48 @@
     background-color: rgba(238, 239, 240, 0.801);
 }
 .menu-buttons{
-    
+    padding-left: 18px;
 }
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(196, 196, 196);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 140px;
+  }
+  
+  .sidenav a {
+    padding: 0px 0px 0px 35px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #eeeeee;
+    display: block;
+    transition: 0.3s;
+
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
 .menu-btn-main {
     padding-left: 15px;
