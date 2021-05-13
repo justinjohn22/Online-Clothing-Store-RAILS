@@ -4,8 +4,11 @@
 .body {
     background-color: rgba(238, 239, 240, 0.801);
 }
-.menu-buttons{
-    padding-left: 18px;
+
+.title-container p {
+    padding: 15px; 
+    text-align: center;
+    font-size: x-large;         
 }
 
 .sidenav {
@@ -19,9 +22,9 @@
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 140px;
-  }
-  
-  .sidenav a {
+}
+
+.sidenav a {
     padding: 0px 0px 0px 35px;
     text-decoration: none;
     font-size: 16px;
@@ -29,24 +32,32 @@
     display: block;
     transition: 0.3s;
 
-  }
-  
-  .sidenav a:hover {
+}
+
+.sidenav a:hover {
     color: #f1f1f1;
-  }
-  
-  .sidenav .closebtn {
+}
+
+.menu-button-group {
+    padding-right: 18px;
+    padding-left: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
+}
+
+@media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+}
 
 .menu-btn-main {
     padding-left: 15px;
@@ -101,14 +112,6 @@
 
 .fit-image {
     object-fit: cover;
-}
-
-.title-container {
-    text-align: center;
-    padding: 15px;
-    p {
-        font-size: x-large;
-    }
 }
 
 .text-field-newsletter {
