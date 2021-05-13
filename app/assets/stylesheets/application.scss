@@ -19,6 +19,39 @@
 
 .slide-show {
    padding: 15px;
+   position: relative;
+   text-align: center;
+}
+
+.slide-show-text {
+    position: absolute;
+    bottom: 100px;
+    left: 45px;
+    text-align: left;
+    color: white;
+   
+    p {
+        font-size: 40px;
+        text-shadow: black 0.1em 0.1em 0.2em
+    }
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.round-button {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    display: inline-block;
+    font-size: 40px;
+    text-align: center;
+    box-shadow:
+    0 0 2px 2px rgb(196, 193, 193),  /* inner white */
+    0 0 2px 2px rgb(153, 147, 153), /* middle magenta */
+    0 0 4px 4px rgb(204, 209, 209); /* outer cyan */
+    
 }
 
 .images-slide-show {
@@ -69,11 +102,13 @@
     overflow-x: scroll;
     padding: 20px;
     box-sizing: border-box;
+    // box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
 }
 
 .image-popular {
     padding-left: 10px;
     padding-right: 10px;
+   
     p {
         text-align: center;
     }

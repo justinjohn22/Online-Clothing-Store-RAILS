@@ -13,12 +13,12 @@
     </div>
     
     <div class="slide-show">
-        <%= link_to image_tag(@random_product.image_url, width: '455px', height: '400px', class: 'images-slide-show'), saved_items_random_path(:product_id => @random_product.id), method: :post %>
+        <%= link_to image_tag(@random_product.image_url, width: '455px', :class => "slide-show-image", height: '400px', class: 'images-slide-show'), saved_items_random_path(:product_id => @random_product.id), method: :post %>
         <%= link_to saved_items_random_path(:product_id => @random_product.id), method: :post do %>
         <div class="slide-show-div">
-          <p><%= @random_product.name %><br><%= number_to_currency(@random_product.price) %></p>
+          <div class = "slide-show-text"><p><b><%= @random_product.name %></b></p><%= number_to_currency(@random_product.price) %></div>
           <% end %>
-          <%= button_to "+", saved_items_random_path(:product_id => @random_product.id), method: :post%>
+          <%= button_to " + ", saved_items_random_path(:product_id => @random_product.id), method: :post, class: 'round-button'%>
         </div>
     </div>
 
