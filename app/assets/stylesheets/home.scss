@@ -1,0 +1,173 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.body {
+    background-color: rgba(238, 239, 240, 0.801);
+}
+
+.title-container p {
+    padding: 15px; 
+    text-align: center;
+    font-size: x-large;         
+}
+
+.slide-show {
+   padding: 15px;
+   position: relative;
+   text-align: center;
+}
+
+.slide-show-text {
+    position: absolute;
+    bottom: 100px;
+    left: 45px;
+    text-align: left;
+    color: white;
+   
+    p {
+        font-size: 40px;
+        text-shadow: black 0.1em 0.1em 0.2em
+    }
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.round-button {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    display: inline-block;
+    font-size: 40px;
+    text-align: center;
+    box-shadow:
+    0 0 2px 2px rgb(196, 193, 193),  /* inner white */
+    0 0 2px 2px rgb(153, 147, 153), /* middle magenta */
+    0 0 4px 4px rgb(204, 209, 209); /* outer cyan */
+    
+}
+
+.images-slide-show {
+    object-fit: cover;
+}
+
+
+.fit-image {
+    object-fit: cover;
+}
+
+.text-field-newsletter {
+    border: none;
+    width: fit-content;
+}
+
+.see-all-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    h3 {
+        margin: 0;
+    }
+
+}
+
+.popular-container {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+.popular {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    overflow-x: scroll;
+    padding: 20px;
+    box-sizing: border-box;
+    // box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
+}
+
+.image-popular {
+    padding-left: 10px;
+    padding-right: 10px;
+   
+    p {
+        text-align: center;
+    }
+}
+
+.btn {
+    color: black;
+}
+
+.btn_women {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 100px;
+    align-items:flex-end;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
+}
+
+.btn_men {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 100px;
+    width: 215px;
+    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
+}
+
+.btn_kids {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 100px;
+    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
+}
+
+.btn_newins {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 220px;
+    width: 215px;
+    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
+}
+
+
+hr.solid {
+    border-top: 2px solid #bbb;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.button-group-main {
+    display: flex;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+}
+
+.button-for-women {
+    color:#EBEBEB;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+   
+}
+
+.button-for-newins {
+    color:#EBEBEB;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+}
+

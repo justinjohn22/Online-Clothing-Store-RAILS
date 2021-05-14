@@ -1,40 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <body class="body">
+
+  <head>
     
+    <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'home', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <div class="title-container">
       <p><b>Home</b></p>
+         <%= yield %>
     </div> 
+
+  </head>
+  <body class="body">
     
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#"><%= link_to "Men", '/products/men' %></a>
-      <a href="#"><%= link_to "Women", '/products/women'%></a>
-      <a href="#"> <%= link_to "Kids", '/products/kids' %></a>
-      <a href="#"> <%= link_to "New-ins", '/products/newins' %></a>
-    </div>
 
-    <div class="menu-button-group">
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-      <%= link_to "saved list", saved_list_path(@current_saved_list), :class => "menu-btn-saved" %>
-      <%= link_to "search", '/products/women', :class => "menu-btn-search" %>
-    </div>
-
-   
-
-    <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-    </script>
-
-  
-    
     <div class="slide-show">
+      
         <%= link_to image_tag(@random_product.image_url, width: '455px', :class => "slide-show-image", height: '400px', class: 'images-slide-show'), saved_items_random_path(:product_id => @random_product.id), method: :post %>
         <%= link_to saved_items_random_path(:product_id => @random_product.id), method: :post do %>
         <div class="slide-show-div">

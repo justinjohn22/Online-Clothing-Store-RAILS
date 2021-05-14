@@ -9,7 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
+  
   <body>
-    <%= yield %>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#"><%= link_to "Men", '/products/men' %></a>
+      <a href="#"><%= link_to "Women", '/products/women'%></a>
+      <a href="#"> <%= link_to "Kids", '/products/kids' %></a>
+      <a href="#"> <%= link_to "New-ins", '/products/newins' %></a>
+    </div>
+    <div class="menu-button-group">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      <span class="glyphicon glyphicon-search"></span>
+      <span class="glyphicon glyphicon-shopping-cart"></span>
+      
+      <!--<%= link_to "search", '/products/women', :class => "menu-btn-search" %> -->
+    </div>
+   <%= yield %>
+
+
   </body>
 </html>
