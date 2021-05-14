@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   post 'saved_items' => 'saved_items#create'
   post 'saved_items_random' => 'saved_items#create_random'
 
-  post 'users' => 'users#create'
+  post 'users' => 'pages#create_user'
 
   resources :products
 end

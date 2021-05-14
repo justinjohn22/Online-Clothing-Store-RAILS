@@ -24,10 +24,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       NewsletterNotifierMailer.send_newsletter_email(@user).deliver
-      flash.now[:notice] = 'Post has been saved successfully.'
+      flash[:notice] = 'User has been saved successfully.'
       redirect_to root_path
     else
-      render 'new'
+      render 'pages/home'
     end
   end
 
