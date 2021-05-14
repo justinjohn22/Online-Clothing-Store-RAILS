@@ -1,18 +1,56 @@
-<div>
-  <%= image_tag(@product.image_url, width: '200px', height: '200px') %>
+<div class="slides">
+  <div> <%= image_tag(@product.image_url, width: '200px', height: '200px')  %> </div>
+  <div> <%= image_tag(@product.image_url2, width: '200px', height: '200px') %> </div>
+  <div> <%= image_tag(@product.image_url3, width: '200px', height: '200px') %> </div>
 </div>
-<div>
-  <%= image_tag(@product.image_url2, width: '200px', height: '200px') %>
-</div>
-<div>
-  <%= image_tag(@product.image_url3, width: '200px', height: '200px') %>
-</div>
+<style>
+  .slides {
+      display: flex;
+  }
+
+  .slides > div {
+      display: flex;
+  }
+
+  .slides {
+      overflow-x: auto;
+  }
+
+  .slides > div {
+      flex-shrink: 0;
+      width: 100%;
+      height: 300px;
+  }
+
+  .slides {
+      scroll-snap-type: x mandatory;
+  }
+
+  .slides > div {
+      scroll-snap-align: start;
+      scroll-behavior: smooth;
+  }
+
+  .slides > div {
+      background: #74ABE2;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+  }
+</style>
+
+<%#= image_tag(@product.image_url, width: '200px', height: '200px', :class => 'd-block w-100')  %>
+<%#= image_tag(@product.image_url2, width: '200px', height: '200px', :class => 'd-block w-100') %>
+<%#= image_tag(@product.image_url3, width: '200px', height: '200px', :class => 'd-block w-100') %>
+
 <h3>
  <%= @product.name %>
 </h3>
 <p>
+  Description:
   <%= @product.description %>
 </p>
 <p>
-  <%= @product.price %>
+  Price:
+  $<%= @product.price %>
 </p>

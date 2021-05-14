@@ -105,6 +105,7 @@
       
       <p>signup with our newsletter...</p>
       <%=form_for :user, url: users_path do |f| %>
+        <%= flash[:notice] %>
         <% if @user.errors.any? %>
           <div class="alert alert-danger">
             <% @user.errors.full_messages.each do |message| %>
