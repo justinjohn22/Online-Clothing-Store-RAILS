@@ -3,6 +3,13 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def details(product)
+    @product_description = product.description
+    @product_url1 = product.image_url
+    @product_url2 = product.image_url2
+    @product_url3 = product.image_url3
+  end
+
   def women
     @products = Product.where(collection_type: "women")
   end

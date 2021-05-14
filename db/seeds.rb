@@ -8,24 +8,36 @@
 
 Product.delete_all
 #Women Items
-product1 = Product.create({:name=>"Top", :price => 30.50,:collection_type=>"women",:image_url=>"https://clothing-images1.s3.amazonaws.com/top1.png",:popularity => 0.8 ,:date_arrived=>"2020-12-5"})
-product2 = Product.create({:name=>"Skirt", :price => 17.50, :collection_type=>"women",:image_url=>"https://clothing-images1.s3.amazonaws.com/skirt1.png", :popularity => 0.6,:date_arrived=>"2020-12-5"})
-product3 = Product.create({:name=>"Hat", :price => 5.50, :collection_type=>"women",:image_url=>"https://clothing-images1.s3.amazonaws.com/w_hat.png", :popularity => 0.3,:date_arrived=>"2020-12-5"})
+Product.create({name: 'Top', price: 30.50,description: "This top is part of our women's collection",
+                collection_type: 'women',image_url: 'https://clothing-images1.s3.amazonaws.com/top1.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/top2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/top3.png', popularity: 0.8 ,date_arrived: '2020-12-5'})
+Product.create({name: 'Skirt', price: 17.50, description: "This jeans are part of our women's collection",
+                collection_type: 'women',image_url: 'https://clothing-images1.s3.amazonaws.com/skirt1.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/skirt2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/skirt3.png', popularity: 0.6,date_arrived: '2020-12-5'})
+Product.create({name: 'Hat', price: 5.50, description: "These jeans are part of our men's collection",
+                collection_type: 'women',image_url: 'https://clothing-images1.s3.amazonaws.com/w_hat.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/w_hat2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/w_hat3.png', popularity: 0.3,date_arrived: '2020-12-5'})
 
 #Men Items
-product4 = Product.create({:name=>"Denim Jeans", :price => 20.00, :collection_type=>"men",:image_url=>"https://clothing-images1.s3.amazonaws.com/denin_men.png", :popularity => 0.8,:date_arrived=>"2020-12-5"})
-product5 = Product.create({:name=>"Shirt", :price => 7.85, :collection_type=>"men",:image_url=>"https://clothing-images1.s3.amazonaws.com/shirt_men1.png", :popularity => 0.3,:date_arrived=>"2020-12-5"})
-product6 = Product.create({:name=>"Shorts", :price => 6.50, :collection_type=>"men",:image_url=>"https://clothing-images1.s3.amazonaws.com/shorts_men.png", :popularity => 0.7,:date_arrived=>"2020-12-5"})
+Product.create({name: 'Denim Jeans', price: 20.00,description: "These jeans are part of our men's collection", 
+                collection_type: 'men',image_url: 'https://clothing-images1.s3.amazonaws.com/denin_men.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/denim_men2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/denim_men3.png',popularity: 0.8,date_arrived: '2020-12-5'})
+Product.create({name: 'Shirt', price: 7.85, description: "This shirt is part of our men's collection",
+                collection_type: 'men',image_url: 'https://clothing-images1.s3.amazonaws.com/shirt_men1.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/shirt_men2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/shirt_men3.png', popularity: 0.3,date_arrived: '2020-12-5'})
+Product.create({name: 'Shorts', price: 6.50, description: "These shorts are part of our men's collection",
+                collection_type: 'men',image_url: 'https://clothing-images1.s3.amazonaws.com/shorts_men.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/shorts_men2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/shorts_men3.png', popularity: 0.7,date_arrived: '2020-12-5'})
 
 #Kids Items
-product7 = Product.create({:name=>"T-Shirt", :price => 10.50,:collection_type=>"kids",:image_url=>"https://clothing-images1.s3.amazonaws.com/k_tshirts.png", :popularity => 0.9,:date_arrived=> "2020-12-5"})
-product8 = Product.create({:name=>"Cap", :price => 3.50, :collection_type=>"kids",:image_url=>"https://clothing-images1.s3.amazonaws.com/cap_kids.png", :popularity => 0.2,:date_arrived=>"2020-12-5"})
-product9 = Product.create({:name=>"Blazer", :price => 90.50, :collection_type=>"kids",:image_url=>"https://clothing-images1.s3.amazonaws.com/blazer_kids.png", :popularity => 0.6,:date_arrived=>"2020-12-5"})
+Product.create({name: 'T-Shirt', price: 10.50,description: "This t-shirt is part of our kids' collection",
+                collection_type: 'kids',image_url: 'https://clothing-images1.s3.amazonaws.com/k_tshirts.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/k_tshirts2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/k_tshirts3.png', popularity: 0.9,date_arrived: '2020-12-5'})
+Product.create({name: 'Cap', price: 3.50, description: "This cap is part of our kids' collection",
+                collection_type: 'kids',image_url: 'https://clothing-images1.s3.amazonaws.com/cap_kids.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/kids_cap2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/kids_cap3.png',popularity: 0.2,date_arrived: '2020-12-5'})
+Product.create({name: 'Blazer', price: 90.50, description: "This blazer is part of our kids' collection",
+                collection_type: 'kids',image_url: 'https://clothing-images1.s3.amazonaws.com/blazer_kids.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/blazer_kids2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/blazer_kids3.png', popularity: 0.6,date_arrived: '2020-12-5'})
 
 #New-in Items
-product10 = Product.create({:name=>"Underwear", :price => 8.50,:collection_type=>"new-ins",:image_url=>"https://clothing-images1.s3.amazonaws.com/underwear.png", :popularity => 0.4,:date_arrived=>"2020-12-5"})
-product11 = Product.create({:name=>"Trainers", :price => 100.00, :collection_type=>"new-ins",:image_url=>"https://clothing-images1.s3.amazonaws.com/trainers.png", :popularity => 0.8,:date_arrived=>"2020-12-5"})
-product12 = Product.create({:name=>"Fedora", :price => 32.00, :collection_type=>"new-ins",:image_url=>"https://clothing-images1.s3.amazonaws.com/fedora.png", :popularity => 0.5,:date_arrived=>"2020-12-5"})
+Product.create({name: 'Underwear', price: 8.50,description: 'This underwear is part of our new arrivals',
+                collection_type: 'new-ins',image_url: 'https://clothing-images1.s3.amazonaws.com/underwear.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/underwear2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/underwear2.png', popularity: 0.4,date_arrived: '2020-12-5'})
+Product.create({name: 'Trainers', price: 100.00, description: 'These trainers are part of our new arrivals',
+                collection_type: 'new-ins',image_url: 'https://clothing-images1.s3.amazonaws.com/trainers.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/trainers2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/trainers3.png', popularity: 0.8,date_arrived: '2020-12-5'})
+Product.create({name: 'Fedora', price: 32.00, description: 'This fedora is part of our new arrivals',
+                collection_type: 'new-ins',image_url: 'https://clothing-images1.s3.amazonaws.com/fedora.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/fedora2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/fedora3.png', popularity: 0.5,date_arrived: '2020-12-5'})
 
 SavedList.destroy_all
 

@@ -2,7 +2,7 @@
 
 <% @saved_list.saved_items.each do |saved_item| %> 
  <div>
-    <%= image_tag(saved_item.product.image_url, width: '100px', height: '200px') %>
+    <%= link_to image_tag(saved_item.product.image_url, width: '100px', height: '200px')  %>
   </div>
   <div>
     <p>Name: <%= saved_item.product.name %>; unit price of <%= number_to_currency(saved_item.product.price) %></p>

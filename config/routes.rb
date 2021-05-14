@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'products/men'
   get 'products/kids'
   get 'products/newins'
+  get 'products/details'
 
   get 'saved_lists/:id' => 'saved_lists#show', as: 'saved_list'
   delete 'saved_lists/:id' => 'saved_lists#destroy'
