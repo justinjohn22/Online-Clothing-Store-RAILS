@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'products/men'
   get 'products/kids'
   get 'products/newins'
+  get 'products/details' => 'products#details', as: 'details'
 
   get 'saved_lists/:id' => 'saved_lists#show', as: 'saved_list'
   delete 'saved_lists/:id' => 'saved_lists#destroy'
@@ -17,8 +18,12 @@ Rails.application.routes.draw do
   post 'saved_items' => 'saved_items#create'
   post 'saved_items_random' => 'saved_items#create_random'
 
-  post 'users' => 'users#create'
+  post 'users' => 'pages#create_user'
+
+  post 'signup' => 'customers#new'
+  get 'signup' => 'customers#new'
 
   resources :products
+  resources :customers
 end
 

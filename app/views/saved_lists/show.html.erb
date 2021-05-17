@@ -2,9 +2,11 @@
 
 <% @saved_list.saved_items.each do |saved_item| %> 
  <div>
-    <%= image_tag(saved_item.product.image_url, width: '100px', height: '200px') %>
+    <%= link_to image_tag(saved_item.product.image_url, width: '100px', height: '200px'), details_path(:id => saved_item.product_id)%>
   </div>
   <div>
+    <%= link_to details_path(:id => saved_item.product_id) do %>
     <p>Name: <%= saved_item.product.name %>; unit price of <%= number_to_currency(saved_item.product.price) %></p>
+    <% end %>
   </div>
-<% end%>
+<% end %>

@@ -3,6 +3,10 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def details
+    @product = Product.find(params[:id])
+  end
+
   def women
     @products = Product.where(collection_type: "women")
   end
