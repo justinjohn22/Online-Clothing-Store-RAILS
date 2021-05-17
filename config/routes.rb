@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
-  root 'pages#home'
+  get 'sessions/new'
 
+  root 'pages#home'
+  get 'logon'  => 'pages#log_on'
+  post 'logon' => 'pages#log_on'
   #Collection re-directed pages
   get 'products/index'
   get 'products/new'
@@ -22,6 +25,12 @@ Rails.application.routes.draw do
 
   post 'signup' => 'customers#new'
   get 'signup' => 'customers#new'
+
+  get 'login' => 'sessions#new'
+  get 'login_page' => 'sessions#new'
+  post 'login_page' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 
   resources :products
   resources :customers
