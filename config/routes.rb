@@ -20,6 +20,10 @@ Rails.application.routes.draw do
 
   post 'users' => 'pages#create_user'
 
+  post 'signup' => 'customers#new'
+  get 'signup' => 'customers#new'
+
   resources :products
+  resources :customers
 end
 
