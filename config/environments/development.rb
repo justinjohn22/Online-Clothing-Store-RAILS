@@ -51,6 +51,9 @@ Rails.application.configure do
   config.assets.precompile += ['women.scss']
   config.assets.precompile += ['women.js']
 
+  config.assets.precompile += ['men.scss']
+  config.assets.precompile += ['kids.scss']
+  config.assets.precompile += ['newins.scss']
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

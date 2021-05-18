@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <%= stylesheet_link_tag  'men', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag '', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  </head>
 
   <body>
-    <header class="container">
-      <div class="navbar-header">
-        <h2>Mens</h2>
-      </div> 
-    </header>
-
-    <div class="container-fluid"> 
+    <div class="items-container"> 
+      <h3> <b> MEN </b> </h3>
       <% @products.each do |product| %>
-        <div>
-          <%= link_to image_tag(product.image_url, width: '100px', height: '200px'), saved_items_path(:product_id => product.id), method: :post %>
-        </div>
-        <div>
+        <div id="images-for-men" >
+          <%= link_to image_tag(product.image_url, width: '300px', height: '300px', class: 'image-fit'), saved_items_path(:product_id => product.id), method: :post %>
           <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
-            <p>Name: <%= product.name %>; unit price of <%= number_to_currency(product.price) %></p>
+                <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
           <% end %>
         </div>
       <% end%>
@@ -23,5 +21,4 @@
   </body>
 
 </html>
-
 
