@@ -1,0 +1,32 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.header-for-women {
+    p {
+        align-items: center;
+    }
+}
+
+.items-container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    width: 490px;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#images-for-women {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: min-content;
+    
+    p {
+        text-align: center;
+    }
+}
+
+.image-fit {
+    object-fit: cover;
+}

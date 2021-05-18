@@ -48,6 +48,9 @@ Rails.application.configure do
   config.assets.precompile += ['home.scss']
   config.assets.precompile += ['home.js']
 
+  config.assets.precompile += ['women.scss']
+  config.assets.precompile += ['women.js']
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
