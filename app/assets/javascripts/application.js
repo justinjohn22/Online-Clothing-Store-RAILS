@@ -13,6 +13,8 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//= require jquery_ujs
 //= require_tree .
 
 function openNav() {

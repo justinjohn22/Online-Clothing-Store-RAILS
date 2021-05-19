@@ -27,9 +27,16 @@
     <div class="menu-button-group">
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
       <span class="glyphicon glyphicon-search"></span>
-      <%= link_to saved_list_path(@current_saved_list) do%>
+      <% if logged_in? %>
+        <%= link_to bag_path do%>
          <span class="glyphicon glyphicon-shopping-cart"> </span>
+        <% end %>
+      <% else %>
+        <%= link_to logon_path do%>
+          <span class="glyphicon glyphicon-shopping-cart"> </span>
+        <% end %>
       <% end %>
+
     </div>
     
     <% flash.each do |message_type, message| %>

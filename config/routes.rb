@@ -32,6 +32,10 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  get 'bag' => 'bags#show'
+  post 'clear_bag' => 'bags#clear'
+
+  resources :order_items
   resources :products
   resources :customers
 end
