@@ -14,7 +14,6 @@
 
   </head>
   <body class="body">
-    
 
     <div class="slide-show">
       
@@ -60,24 +59,24 @@
             <%= link_to "see all+", products_path, :class => "btn" %>  
           </p>
         </div>
-
-        <div class="button-for-women"> 
-          <%= link_to "women", '/products/women', :class => "btn_women" %>
+        <div class="grid-for-buttons">
+          <div class="grid-container">
+            <div class="Women">
+              <%= link_to "women", '/products/women', :class => "btn_collection" %>
+            </div>
+            <div class="Men">
+              <%= link_to "men", '/products/men',:class => "btn_collection" %>
+            </div>
+            <div class="Kids">
+              <%= link_to "kids", '/products/kids', :class => "btn_collection" %>
+            </div>
+            <div class="Newins">
+              <%= link_to "new-ins", '/products/newins', :class => "btn_newins" %>
+            </div>
+          </div>
         </div>
-        <div class="button-group-main">
-          <div class="button-group-minor">
-            <div class="button-for-men">
-              <%= link_to "men", '/products/men',:class => "btn_men" %>
-            </div>
-            <br>
-            <div class="button-for-kids">
-              <%= link_to "kids", '/products/kids', :class => "btn_kids" %>
-            </div>
-          </div>
-          <div class="button-for-newins">
-            <%= link_to "new-ins", '/products/newins', :class => "btn_newins" %>
-          </div>
-        </div>    
+
+           
     </div>
     <br>
     <div class="news-letter">

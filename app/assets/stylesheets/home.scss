@@ -3,6 +3,7 @@
 
 .body {
     background-color: rgba(238, 239, 240, 0.801);
+    padding-bottom: 55px;
 }
 
 .title-container p {
@@ -101,44 +102,28 @@
     }
 }
 
+
 .btn {
     color: black;
 }
 
-.btn_women {
+.btn_collection {
     color: black;
     background-color: rgb(255, 255, 255);
     display: flex;
-    height: 100px;
     align-items:flex-end;
-    margin-bottom: 20px;
     box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
-}
-
-.btn_men {
-    color: black;
-    background-color: rgb(255, 255, 255);
-    display: flex;
+    width: 100%;
     height: 100px;
-    width: 215px;
-    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
-}
-
-.btn_kids {
-    color: black;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    height: 100px;
-    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
 }
 
 .btn_newins {
     color: black;
     background-color: rgb(255, 255, 255);
     display: flex;
-    height: 220px;
-    width: 215px;
     box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -148,32 +133,22 @@ hr.solid {
     margin-right: 18px;
 }
 
-.button-group-main {
-    display: flex;
-    margin-left: 18px;
-    margin-right: 18px;
-    margin-bottom: 18px;
+.grid-for-buttons {
+    padding: 15px;
 }
 
-.button-for-women {
-    color:#EBEBEB;
-    margin-left: 18px;
-    margin-right: 18px;
-    margin-bottom: 18px;
-    height: 100px;
-    background-color: rgb(255, 255, 255);
-   
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px 15px;
+    grid-template-areas:
+        "Women Women"
+        "Men Newins"
+        "kids Newins";
 }
 
-.button-for-newins {
-    color:#EBEBEB;
-    margin-left: 18px;
-    margin-right: 18px;
-    margin-bottom: 18px;
-}
-
-.news-letter {
-    p {
-       padding-right: 30px;
-    }
-}
+.Women { grid-area: Women; }
+.Men { grid-area: Men; }
+.kids { grid-area: kids; }
+.Newins { grid-area: Newins; }
