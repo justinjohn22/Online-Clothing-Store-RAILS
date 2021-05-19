@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%= stylesheet_link_tag  'kids', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag  'collection_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag '', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
   </head>
 
   <body>
+    <h3> <b> KIDS </b> </h3>
     <div class="items-container"> 
-      <h3> <b> KIDS </b> </h3>
+
       <% @products.each do |product| %>
         <div id="images-for-kids" >
-          <%= link_to image_tag(product.image_url, width: '300px', height: '300px', class: 'image-fit'), saved_items_path(:product_id => product.id), method: :post %>
+          <%= link_to image_tag(product.image_url, width: '150px', height: '150px', class: 'image-fit'), saved_items_path(:product_id => product.id), method: :post %>
           <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
                 <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
           <% end %>
