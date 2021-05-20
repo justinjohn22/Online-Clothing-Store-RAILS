@@ -54,8 +54,8 @@
 
     <div class="navbar">
       <a href="/">home</a>
-      <a href="#news">news</a>
-      <a href="#save">saved</a>
+      <a href="#news">scan</a>
+      <%= link_to "saved list", saved_list_path(@current_saved_list) %>
       <%= link_to "account", logged_account_path(@current_customer) %>
     </div>
 

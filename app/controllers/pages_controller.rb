@@ -4,6 +4,10 @@ class PagesController < ApplicationController
       @random_product = Product.order('RANDOM()').first
       @popular_products = Product.where("popularity >= ?", 0.8)
       @user = User.new
+      @women_products = Product.where(collection_type: "women").count
+      @men_products = Product.where(collection_type: "men").count
+      @kids_products = Product.where(collection_type: "kids").count
+      @newins_products = Product.where(collection_type: "newins").count
     end
 
     def create_user
