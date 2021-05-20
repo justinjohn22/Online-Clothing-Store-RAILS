@@ -10,6 +10,8 @@
     padding-right: 10px;
     padding-left: 10px;
     padding-bottom: 100%;
+    justify-content: center;
+
 }
 
 h3 {
@@ -25,15 +27,18 @@ h3 {
     column-gap: 20px;
 }
 
-#images-for-men {
+#images-for-collection {
     padding-left: 10px;
     padding-right: 10px;
     width: min-content;
     
     p {
         text-align: center;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
     }
 }
+
 
 .image-fit {
     object-fit: cover;

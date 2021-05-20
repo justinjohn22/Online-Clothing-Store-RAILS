@@ -89,6 +89,7 @@
     flex-direction: row;
     overflow-x: scroll;
     padding: 20px;
+    padding-top: 5px;
     box-sizing: border-box;
     // box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
 }
@@ -105,6 +106,8 @@
 
 .btn {
     color: black;
+    padding-top: 12px;
+    padding-bottom: 0px;
 }
 
 .btn_collection {
@@ -114,16 +117,23 @@
     align-items:flex-end;
     box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
     width: 100%;
-    height: 100px;
+    height: 150px;
+    padding: 15px;
+    font-size: medium;
+    color: rgb(108, 112, 112);
 }
 
 .btn_newins {
     color: black;
     background-color: rgb(255, 255, 255);
     display: flex;
+    align-items:flex-end;
     box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
     width: 100%;
     height: 100%;
+    padding: 15px;
+    font-size: medium;
+    color: rgb(108, 112, 112);
 }
 
 

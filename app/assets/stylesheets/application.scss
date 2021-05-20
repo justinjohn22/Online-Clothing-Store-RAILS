@@ -9,6 +9,10 @@
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 140px;
+    h4 {
+        padding-left: 25px;
+        padding-bottom: 0px;
+    }
 }
 
 .sidenav a {
@@ -24,7 +28,11 @@
 .sidenav a:hover {
     color: #f1f1f1;
 }
-
+.solid-line {
+    color: #3f3d3d;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 .menu-button-group {
     padding-top: 18px;
     padding-right: 18px;
@@ -69,6 +77,8 @@ body {
     width: 100%;
     margin-bottom: 0px !important;
     position: fixed !important;
+    display: flex;
+    justify-content: space-between;
 
 }
   
@@ -77,9 +87,11 @@ body {
     display: block;
     color: #3f3d3d;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px;
     text-decoration: none;
     font-size: 17px;
+  
+   
 }
   
 .navbar a:hover {
