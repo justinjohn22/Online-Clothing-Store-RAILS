@@ -31,7 +31,8 @@ class CustomersController < ApplicationController
     else 
       render 'edit'
     end  
-
+  end 
+  
   private
     def customer_params
       params.require(:customer).permit(:name, :email, :password, :password_confirmation)
