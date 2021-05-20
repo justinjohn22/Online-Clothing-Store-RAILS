@@ -27,6 +27,9 @@ Rails.application.routes.draw do
   get 'signup' => 'customers#new'
 
   get 'customers/:id' => 'customers#show', as: 'logged_account'
+  
+  # post 'customers/:id/edit' => 'customers#edit', as: 'update_account'
+  get 'customers/:id/edit' => 'customers#edit', as: 'update_account'
 
   get 'login' => 'sessions#new'
   get 'login_page' => 'sessions#new'

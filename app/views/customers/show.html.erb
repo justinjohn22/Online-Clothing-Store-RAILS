@@ -14,9 +14,11 @@
 
     <div>
         <%= link_to "Pending orders", bag_path %>
-      
     </div>
 
+    <div>
+        <%= link_to "update account details", update_account_path(@customer) %>
+    </div>
 
     <div>
       <% if logged_in? %>

@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def women
-    @products = Product.where(collection_type: "women")
+    @products = Product.where(collection_type: "women") 
   end
 
   def men

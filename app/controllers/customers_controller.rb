@@ -18,6 +18,20 @@ class CustomersController < ApplicationController
     end
   end
 
+  def edit
+    @customer  = Customer.find(params[:id])
+  end
+
+  def update 
+    @customer = Customer.find(params[:id])
+    if @customer.update_attributes(customer_params)
+      # handle successful update. 
+      flash[:success] = "Profile updated!"
+      redirect_to @customer
+    else 
+      render 'edit'
+    end  
+
   private
     def customer_params
       params.require(:customer).permit(:name, :email, :password, :password_confirmation)
