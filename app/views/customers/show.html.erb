@@ -1,12 +1,35 @@
-<h1>
-  <%= gravatar_for @customer %>
-  <%= @customer.name %>
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <%= stylesheet_link_tag  'collection_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag '', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  -->
+  </head>
 
-<div>
-  <% if logged_in? %>
-    <%= link_to "Log out", logout_path, method: "delete" %>
-  <% end %>
-</div>
+  <body>
+    <h1>
+      <%= gravatar_for @customer %>
+      <%= @customer.name %>
+    </h1>
+
+    <div>
+        <%= link_to "Pending orders", bag_path %>
+      
+    </div>
+
+
+    <div>
+      <% if logged_in? %>
+        <%= link_to "Log out", logout_path, method: "delete" %>
+      <% end %>
+    </div>
+
+  </body>
+
+</html>
+
+
+
+
 
 

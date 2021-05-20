@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   post 'signup' => 'customers#new'
   get 'signup' => 'customers#new'
 
+  get 'customers/:id' => 'customers#show', as: 'logged_account'
+
   get 'login' => 'sessions#new'
   get 'login_page' => 'sessions#new'
   post 'login_page' => 'sessions#new'
@@ -33,6 +35,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   get 'bag' => 'bags#show'
+  post 'bag' => 'bags#show' 
   post 'clear_bag' => 'bags#clear'
 
   resources :order_items
