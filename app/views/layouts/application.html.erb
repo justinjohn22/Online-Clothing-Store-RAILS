@@ -25,7 +25,6 @@
 
     <div class="menu-button-group">
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-      
       <form action="" class="search-bar">
         <input type="search" name="search" pattern=".*\S.*" required>
         <button class="search-btn" type="submit">
@@ -55,7 +54,7 @@
     <div class="navbar">
       <a href="/">home</a>
       <a href="#news">news</a>
-      <a href="#save">saved</a>
+      <%= link_to "saved list", saved_list_path(@current_saved_list) %></a>
       <%= link_to "account", logged_account_path(@current_customer) %>
     </div>
 

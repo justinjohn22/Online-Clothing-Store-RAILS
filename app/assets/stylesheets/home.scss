@@ -3,7 +3,7 @@
 
 .body {
     background-color: rgba(238, 239, 240, 0.801);
-    padding-bottom: 55px;
+    padding-bottom: 100px;
 }
 
 .title-container p {
@@ -163,3 +163,7 @@ hr.solid {
 .Men { grid-area: Men; }
 .kids { grid-area: kids; }
 .Newins { grid-area: Newins; }
+
+.footer-home {
+    padding: 25px;
+}
