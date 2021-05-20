@@ -10,8 +10,8 @@
     <h3> <b> WOMEN </b> </h3>
     <div class="items-container"> 
       <% @products.each do |product| %>
-        <div id="images-for-women" >
-          <%= link_to image_tag(product.image_url, width: '150px', height: '150px', class: 'image-fit'), saved_items_path(:product_id => product.id), method: :post %>
+        <div id="images-for-collection" >
+          <%= link_to image_tag(product.image_url,  width: '150px', height: '180px', class: 'image-fit'), saved_items_path(:product_id => product.id), method: :post %>
           <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
                 <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
           <% end %>

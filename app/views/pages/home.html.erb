@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    
+<head>
+
     <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'home', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <div class="title-container">
-      <p><b>Home</b></p>
-         <%= yield %>
-    </div> 
+        <p><b>Home</b></p>
+        <%= yield %>
+    </div>
 
-  </head>
-  <body class="body">
+</head>
+
+<body class="body">
 
     <div class="slide-show">
-      
+
         <%= link_to image_tag(@random_product.image_url, :class => "slide-show-image", class: 'images-slide-show'), saved_items_random_path(:product_id => @random_product.id), method: :post %>
         <%= link_to saved_items_random_path(:product_id => @random_product.id), method: :post do %>
         <div class="slide-show-div">
-          <div class = "slide-show-text"><p><b><%= @random_product.name %></b></p><%= number_to_currency(@random_product.price) %></div>
-          <% end %>
-          <%= button_to " + ", saved_items_random_path(:product_id => @random_product.id), method: :post, class: 'round-button'%>
+            <div class="slide-show-text">
+                <p><b><%= @random_product.name %></b></p><%= number_to_currency(@random_product.price) %>
+            </div>
+            <% end %>
+            <%= button_to " + ", saved_items_random_path(:product_id => @random_product.id), method: :post, class: 'round-button'%>
         </div>
     </div>
 
@@ -30,22 +33,22 @@
 
     <div>
         <div class="see-all-container">
-          <h3>Popular</h3> 
-          <p>
-            <%= link_to "see all+", products_path, :class => "btn" %>  
-          </p>
-        </div> 
+            <h3>Popular</h3>
+            <p>
+                <%= link_to "see all+", products_path, :class => "btn" %>
+            </p>
+        </div>
         <div class="popular">
-          <% @popular_products.each do |product| %>
-          <div>
-              <div class="image-popular">
-                <%=link_to image_tag(product.image_url, width: '200px', height: '250px', class: 'fit-image'), saved_items_path(:product_id => product.id), method: :post %>
-                <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
-                <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
-              </div>
-              <% end %>
-          </div>
-          <% end%>
+            <% @popular_products.each do |product| %>
+            <div>
+                <div class="image-popular">
+                    <%=link_to image_tag(product.image_url, width: '200px', height: '250px', class: 'fit-image'), saved_items_path(:product_id => product.id), method: :post %>
+                    <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
+                    <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
+                </div>
+                <% end %>
+            </div>
+            <% end%>
         </div>
     </div>
     <br>
@@ -54,56 +57,55 @@
 
     <div>
         <div class="see-all-container">
-          <h3>Collections</h3>  
-          <p>
-            <%= link_to "see all+", products_path, :class => "btn" %>  
-          </p>
+            <h3>Collections</h3>
+            <p> <%= link_to "see all+", products_path, :class => "btn" %> </p>
         </div>
         <div class="grid-for-buttons">
-          <div class="grid-container">
-            <div class="Women">
-              <%= link_to "women", '/products/women', :class => "btn_collection" %>
+            <div class="grid-container">
+                <div class="Women">
+                    <b> <%= link_to "women", '/products/women', :class => "btn_collection" %></b>
+                </div>
+                <div class="Men">
+                    <b> <%= link_to "men", '/products/men',:class => "btn_collection" %> </b>
+                </div>
+                <div class="Kids">
+                    <b> <%= link_to "kids", '/products/kids', :class => "btn_collection" %> </b>
+                </div>
+                <div class="Newins">
+                    <b> <%= link_to "new-ins", '/products/newins', :class => "btn_newins" %> </b>
+                </div>
             </div>
-            <div class="Men">
-              <%= link_to "men", '/products/men',:class => "btn_collection" %>
-            </div>
-            <div class="Kids">
-              <%= link_to "kids", '/products/kids', :class => "btn_collection" %>
-            </div>
-            <div class="Newins">
-              <%= link_to "new-ins", '/products/newins', :class => "btn_newins" %>
-            </div>
-          </div>
         </div>
 
-           
+
     </div>
     <br>
     <div class="news-letter">
-      <div class="see-all-container">
-          <h3>Newsletter</h3>  
-      </div>
-      
-      <p>signup with our newsletter...</p>
-      <%=form_for :user, url: users_path do |f| %>
+        <div class="see-all-container">
+            <h3>Newsletter</h3>
+        </div>
+
+        <p>signup with our newsletter...</p>
+        <%=form_for :user, url: users_path do |f| %>
         <%= flash[:notice] %>
         <% if @user.errors.any? %>
-          <div class="alert alert-danger">
+        <div class="alert alert-danger">
             <% @user.errors.full_messages.each do |message| %>
-              <div><%= message %></div>
+            <div><%= message %></div>
             <% end %>
-          </div>
+        </div>
         <% end %>
-    
+
         <p>
-          <%= f.text_field :email, placeholder: 'Enter your Email', :class => "text-field-newsletter"%>
+            <%= f.text_field :email, placeholder: 'Enter your Email', :class => "text-field-newsletter"%>
         </p>
-        
+
         <p>
-          <%= f.submit%>
+            <%= f.submit%>
         </p>
-      <% end %>
+        <% end %>
     </div>
 
-  </body>
+</body>
+
 </html>
