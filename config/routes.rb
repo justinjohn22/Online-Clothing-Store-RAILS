@@ -38,5 +38,7 @@ Rails.application.routes.draw do
   resources :order_items
   resources :products
   resources :customers
+
+  get "/auth/twitter/callback" => "omniauth_callbacks#twitter"
 end
 
