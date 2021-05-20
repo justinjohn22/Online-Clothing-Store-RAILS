@@ -14,13 +14,12 @@
 
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#"><%= link_to "Home", '/' %></a>
-      <br>
+      <h4> <b> Shop </b> </h4> <br>
       <a href="#"><%= link_to "Men", '/products/men' %></a>
       <a href="#"><%= link_to "Women", '/products/women'%></a>
       <a href="#"> <%= link_to "Kids", '/products/kids' %></a>
       <a href="#"> <%= link_to "New-ins", '/products/newins' %></a> 
-      <br>
+      <hr class="solid-line">
       <a href="#"> <%= link_to "Saved List", saved_list_path(@current_saved_list) %></a>
     </div>
 
