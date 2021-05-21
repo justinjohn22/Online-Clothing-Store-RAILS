@@ -6,6 +6,7 @@ class CreateOrderItems < ActiveRecord::Migration[5.1]
       t.integer :quantity
       t.integer :product_id
       t.integer :order_id
+      t.integer :customer_id
       t.decimal :total
       t.decimal :unit_price
 

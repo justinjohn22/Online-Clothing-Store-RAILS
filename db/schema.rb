@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20210520043534) do
     t.integer "quantity"
     t.integer "product_id"
     t.integer "order_id"
+    t.integer "customer_id"
     t.decimal "total"
     t.decimal "unit_price"
     t.datetime "created_at", null: false

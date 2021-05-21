@@ -61,6 +61,7 @@
     <%= f.select :color, raw("<option>Yellow</option><option>White</option><option>Black</option><option>Purple</option><option>Green</option><option>Red</option><option>Blue</option>") %>
     <p>Quantity</p>
     <%= f.number_field :quantity, :value => 1, :min => 1 %>
+    <%= f.hidden_field :customer_id, :value => @customer.id%>
     <%= f.submit "Add to Cart" %>
   <% end %>
 <% else %>
