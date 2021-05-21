@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <%= stylesheet_link_tag  'collection_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag '', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag  'customer_logged', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!--<%= javascript_include_tag '', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">  -->
   </head>
 
   <body>
-    <h1>
-      <%= gravatar_for @customer %>
-      <%= @customer.name %>
-    </h1>
-
-    <div>
-        <%= link_to "Pending orders", bag_path %>
+    <div class="profile-header">
+      <%= gravatar_for @customer %> 
+      <h3> <%= @customer.name %> <h3>
     </div>
 
-    <div>
-        <%= link_to "update account details", update_account_path(@customer) %>
-    </div>
 
-    <div>
-      <% if logged_in? %>
-        <%= link_to "Log out", logout_path, method: "delete" %>
-      <% end %>
+    <div class="button-group">
+      <div class="profile-btn">
+          <%= link_to "Pending orders", bag_path %>
+      </div>
+
+      <div class="profile-btn">
+          <%= link_to "update account details", update_account_path(@customer) %>
+      </div>
+
+     <div class="profile-btn">
+        <% if logged_in? %>
+          <%= link_to "Log out", logout_path, method: "delete" %>
+        <% end %>
+      </div>
     </div>
 
   </body>

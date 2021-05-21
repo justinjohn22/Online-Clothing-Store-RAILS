@@ -71,11 +71,10 @@ body {
 .navbar {
     overflow: hidden;
     background-color: rgb(218, 131, 131);
-    position: relative;
     bottom: 0;
     width: 100%;
     margin-bottom: 0px !important;
-    position: fixed !important;
+    position: fixed !important; 
     display: flex;
     justify-content: space-between;
 

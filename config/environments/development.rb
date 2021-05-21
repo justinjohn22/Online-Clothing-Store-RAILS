@@ -49,6 +49,7 @@ Rails.application.configure do
   config.assets.precompile += ['home.js']
 
   config.assets.precompile += ['collection_pages.scss']
+  config.assets.precompile += ['customer_logged.scss']
 
  
   # Raises error for missing translations
