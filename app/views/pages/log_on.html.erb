@@ -1,6 +1,41 @@
-<h1>Fashion+</h1>
-<h2>Quality is not act, it is a habit</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <%= stylesheet_link_tag 'log_on', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<%= button_to "Login", login_page_path %>
-<%= button_to "Login with Twitter", "auth/twitter", method: :post, class: "btn btn-primary" %>
-<%= link_to "New to us? Sign up!", signup_path%>
+  <div class="heading">
+    <p id="fashion"> <b>Fashion+ </b></p>
+    <p id="sentence">Quality is not an act, it is a habit.</p>
+    <hr class="solid">  
+  </div>
+
+  
+
+  <body>
+    <div class="grid-container">
+        
+        <div class="login"> 
+            <b> <%=link_to "Login", login_page_path, :class => "btn_collection" %></b>  
+        </div>
+
+        <div class="twitter">  
+             <%= link_to "Login with Twitter", "auth/twitter", method: :post, class: "btn_collection" %>
+        </div>
+        
+        <div class="line"> <hr class="solid"> </div>
+        
+        <div class="sign-up">
+            <%= link_to "New to us? Sign up!", signup_path, class: "btn_collection" %>
+        </div>
+    </div>
+
+  </body>
+
+</html>
+
+
+
+
+
+

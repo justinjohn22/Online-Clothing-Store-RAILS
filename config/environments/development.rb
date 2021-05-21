@@ -50,7 +50,7 @@ Rails.application.configure do
 
   config.assets.precompile += ['collection_pages.scss']
   config.assets.precompile += ['customer_logged.scss']
-
+  config.assets.precompile += ['log_on.scss']
  
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
