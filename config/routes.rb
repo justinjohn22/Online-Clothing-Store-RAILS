@@ -14,12 +14,17 @@ Rails.application.routes.draw do
   get 'products/kids'
   get 'products/newins'
   get 'products/details' => 'products#details', as: 'details'
+  
+  post 'products/filter' => 'products#filter', as: 'filter'
+  get  'products/filter' => 'products#filter', as: 'get_filter'
 
   get 'saved_lists/:id' => 'saved_lists#show', as: 'saved_list'
   delete 'saved_lists/:id' => 'saved_lists#destroy'
 
   post 'saved_items' => 'saved_items#create'
   post 'saved_items_random' => 'saved_items#create_random'
+
+  post 'customers/:id/toggle_subscription' => 'customers#toggle_subscription', as: 'subscription' 
 
   post 'users' => 'pages#create_user'
 

@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20210520043534) do
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.boolean "subscription"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
@@ -49,6 +50,9 @@ ActiveRecord::Schema.define(version: 20210520043534) do
     t.string "name"
     t.decimal "price"
     t.text "description"
+    t.string "filter_description"
+    t.string "colour"
+    t.string "size"
     t.string "collection_type"
     t.string "image_url"
     t.string "image_url2"

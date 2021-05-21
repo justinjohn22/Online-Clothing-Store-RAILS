@@ -2,12 +2,15 @@
 <html lang="en">
   <head>
     <%= stylesheet_link_tag  'collection_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag '', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag  'products', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'products', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
   </head>
 
+
   <body>
     <h3> <b> All products </b> </h3>
+    <%= link_to "filter",  filter_path, method: :post %>
     <div class="items-container"> 
       <% @products.each do |product| %>
         <div id="images-for-collection" >

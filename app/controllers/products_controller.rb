@@ -8,6 +8,10 @@ class ProductsController < ApplicationController
     @order_item = current_order.order_items.new
   end
 
+  def filter 
+    
+  end
+
   def women
     @products = Product.where(collection_type: "women") 
   end
@@ -17,7 +21,7 @@ class ProductsController < ApplicationController
   end
 
   def kids
-    @products = Product.where(collection_type: "kids")
+     @products = Product.where(collection_type: "kids")
   end
 
   def newins

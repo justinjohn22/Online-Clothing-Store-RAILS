@@ -35,10 +35,25 @@ class CustomersController < ApplicationController
       render 'edit'
     end  
   end 
+
+  def toggle_subscription 
+    @customer = Customer.find(params[:id]) 
+    if !@customer.subscription
+      @customer.subscription = true 
+      user = User.create({email: @customer.email})
+      user.save
+      @customer.save
+    else
+      @customer.subscription = false 
+      user = User.where(email: @customer.email)
+      user.destroy_all
+      @customer.save
+    end
+  end
  
   private
     def customer_params
-      params.require(:customer).permit(:name, :email, :password, :password_confirmation)
+      params.require(:customer).permit(:name, :email, :subscription, :password, :password_confirmation)
     end
     
     # Confirms a logged-in user.
