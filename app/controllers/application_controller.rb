@@ -5,6 +5,15 @@ class ApplicationController < ActionController::Base
 
   before_action :current_saved_list
 
+  def search
+    if params[:search].blank?  
+      redirect_to(root_path, alert: "Empty field!") and return  
+    else  
+      @parameter = params[:search].downcase  
+      @results = Product.all.where("lower(filter_description) LIKE '%#{@parameter}%'")
+    end  
+  end
+
   private 
      def current_saved_list
       if session[:saved_list_id]

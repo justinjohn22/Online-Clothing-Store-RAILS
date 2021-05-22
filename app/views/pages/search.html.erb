@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <%= stylesheet_link_tag '', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h3>Search Result</h3>  
+
+    <% @results.each do |result| %>  
+        <%= image_tag result.image_url %><br>  
+      
+    <% end %>
+
+  </body>
+
+</html>
+
+
+
+
+
+

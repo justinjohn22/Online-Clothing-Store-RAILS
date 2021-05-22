@@ -31,6 +31,8 @@ Rails.application.routes.draw do
   post 'signup' => 'customers#new'
   get 'signup' => 'customers#new'
 
+  get '/search' => 'pages#search', :as => 'search_page'
+
   get 'customers/:id' => 'customers#show', as: 'logged_account'
   
   # post 'customers/:id/edit' => 'customers#edit', as: 'update_account'

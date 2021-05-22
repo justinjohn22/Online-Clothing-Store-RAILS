@@ -26,13 +26,16 @@
     <div class="menu-button-group">
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
       
-      <form action="" class="search-bar">
-        <input type="search" name="search" pattern=".*\S.*" required>
-        <button class="search-btn" type="submit">
-          <span>Search</span>
-        </button>
-      </form>
-
+      <%= form_tag(search_page_path, :method => "get",   
+          class: 'navbar-form navbar-left') do %>  
+        <div class="input-group">  
+          <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+          <div class="input-group-btn">  
+            <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+          </div>  
+        </div>  
+      <% end %>
+      
       <% if logged_in? %>
         <%= link_to bag_path do%>
          <span class="glyphicon glyphicon-shopping-cart"> </span>

@@ -8,35 +8,35 @@
 
 Product.delete_all
 #Women Items
-Product.create({name: 'Top', price: 30.50, description: "This top is part of our women's collection", filter_description: "summer", colour: 'grey', size: "s",
+Product.create({name: 'Top', price: 30.50, description: "This top is part of our women's collection", filter_description: "summer top gray grey small s women women's", colour: 'grey', size: "s",
                 collection_type: 'women',image_url: 'https://clothing-images1.s3.amazonaws.com/top1.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/top2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/top3.png', popularity: 0.0 ,date_arrived: '2020-12-5'})
-Product.create({name: 'Skirt', price: 17.50, description: "This jeans are part of our women's collection", filter_description: "indoors", colour: 'red', size: "m",
+Product.create({name: 'Skirt', price: 17.50, description: "This jeans are part of our women's collection", filter_description: "indoors skirt red m medium women", colour: 'red', size: "m",
                 collection_type: 'women',image_url: 'https://clothing-images1.s3.amazonaws.com/skirt1.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/skirt2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/skirt3.png', popularity: 0.0,date_arrived: '2020-12-5'})
-Product.create({name: 'Hat', price: 5.50, description: "These jeans are part of our women's collection", filter_description: "outdoors", colour: 'brown', size: "l",
+Product.create({name: 'Hat', price: 5.50, description: "This hat is part of our women's collection", filter_description: "outdoors hat women brown summer large ", colour: 'brown', size: "l",
                 collection_type: 'women',image_url: 'https://clothing-images1.s3.amazonaws.com/w_hat.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/w_hat2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/w_hat3.png', popularity: 0.0,date_arrived: '2020-12-5'})
 
 #Men Items
-Product.create({name: 'Denim Jeans', price: 20.00,description: "These jeans are part of our men's collection", filter_description: "outdoors", colour: 'blue', size: "xl",
+Product.create({name: 'Denim Jeans', price: 20.00,description: "These jeans are part of our men's collection", filter_description: "outdoors denim jeans blue xl extra large extra-large men", colour: 'blue', size: "xl",
                 collection_type: 'men',image_url: 'https://clothing-images1.s3.amazonaws.com/denin_men.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/denim_men2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/denim_men3.png',popularity: 0.0,date_arrived: '2020-12-5'})
-Product.create({name: 'Shirt', price: 7.85, description: "This shirt is part of our men's collection", filter_description: "formal", colour: 'green', size: "s",
+Product.create({name: 'Shirt', price: 7.85, description: "This shirt is part of our men's collection", filter_description: "formal shirt green men s small ", colour: 'green', size: "s",
                 collection_type: 'men',image_url: 'https://clothing-images1.s3.amazonaws.com/shirt_men1.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/shirt_men2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/shirt_men3.png', popularity: 0.0,date_arrived: '2020-12-5'})
-Product.create({name: 'Shorts', price: 6.50, description: "These shorts are part of our men's collection", filter_description: "summer", colour: 'blue', size: "xxl",
+Product.create({name: 'Shorts', price: 6.50, description: "These shorts are part of our men's collection", filter_description: "summer shorts blue xxl men", colour: 'blue', size: "xxl",
                 collection_type: 'men',image_url: 'https://clothing-images1.s3.amazonaws.com/shorts_men.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/shorts_men2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/shorts_men3.png', popularity: 0.0,date_arrived: '2020-12-5'})
 
 #Kids Items
-Product.create({name: 'T-Shirt', price: 10.50,description: "This t-shirt is part of our kids' collection", filter_description: "summer", colour: 'black', size: "l",
+Product.create({name: 'T-Shirt', price: 10.50,description: "This t-shirt is part of our kids' collection", filter_description: "summer t-shirt t shirt kids black printed t shirt printed t-shirt large l", colour: 'black', size: "l",
                 collection_type: 'kids',image_url: 'https://clothing-images1.s3.amazonaws.com/k_tshirts.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/k_tshirts2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/k_tshirts3.png', popularity: 0.0,date_arrived: '2020-12-5'})
-Product.create({name: 'Cap', price: 3.50, description: "This cap is part of our kids' collection", filter_description: "outdoors", colour: 'blue', size: "xl",
+Product.create({name: 'Cap', price: 3.50, description: "This cap is part of our kids' collection", filter_description: "outdoors cap summer kids blue xl", colour: 'blue', size: "xl",
                 collection_type: 'kids',image_url: 'https://clothing-images1.s3.amazonaws.com/cap_kids.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/kids_cap2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/kids_cap3.png', popularity: 0.0, date_arrived: '2020-12-5'})
-Product.create({name: 'Blazer', price: 90.50, description: "This blazer is part of our kids' collection", filter_description: "formal", colour: 'white', size: "s",
+Product.create({name: 'Blazer', price: 90.50, description: "This blazer is part of our kids' collection", filter_description: "formal kids white small s", colour: 'white', size: "s",
                 collection_type: 'kids',image_url: 'https://clothing-images1.s3.amazonaws.com/blazer_kids.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/blazer_kids2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/blazer_kids3.png', popularity: 0.0,date_arrived: '2020-12-5'})
 
 #New-in Items
-Product.create({name: 'Underwear', price: 8.50,description: 'This underwear is part of our new arrivals', filter_description: "underwear", colour: 'white', size: "xxl",
+Product.create({name: 'Underwear', price: 8.50,description: 'This underwear is part of our new arrivals', filter_description: "underwear black mens men xxl", colour: 'black', size: "xxl",
                 collection_type: 'new-ins',image_url: 'https://clothing-images1.s3.amazonaws.com/underwear.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/underwear2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/underwear2.png', popularity: 0.0, date_arrived: '2020-12-5'})
-Product.create({name: 'Trainers', price: 100.00, description: 'These trainers are part of our new arrivals', filter_description: "outdoors", colour: 'white', size: "m",
+Product.create({name: 'Trainers', price: 100.00, description: 'These trainers are part of our new arrivals', filter_description: "outdoors trainers sport sports mens men white", colour: 'white', size: "m",
                 collection_type: 'new-ins',image_url: 'https://clothing-images1.s3.amazonaws.com/trainers.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/trainers2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/trainers3.png', popularity: 0.0, date_arrived: '2020-12-5'})
-Product.create({name: 'Fedora', price: 32.00, description: 'This fedora is part of our new arrivals', filter_description: "outdoors", colour: 'brown', size: "l",
+Product.create({name: 'Fedora', price: 32.00, description: 'This fedora is part of our new arrivals', filter_description: "outdoors mens men kid kids brown large hat fedora", colour: 'brown', size: "l",
                 collection_type: 'new-ins',image_url: 'https://clothing-images1.s3.amazonaws.com/fedora.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/fedora2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/fedora3.png', popularity: 0.0, date_arrived: '2020-12-5'})
 
 #Dummy Test User
