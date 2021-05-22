@@ -32,7 +32,7 @@ Product.create({name: 'Blazer', price: 90.50, description: "This blazer is part 
                 collection_type: 'kids',image_url: 'https://clothing-images1.s3.amazonaws.com/blazer_kids.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/blazer_kids2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/blazer_kids3.png', popularity: 0.0,date_arrived: '2020-12-5'})
 
 #New-in Items
-Product.create({name: 'Underwear', price: 8.50,description: 'This underwear is part of our new arrivals', filter_description: "formal", colour: 'white', size: "xxl",
+Product.create({name: 'Underwear', price: 8.50,description: 'This underwear is part of our new arrivals', filter_description: "underwear", colour: 'white', size: "xxl",
                 collection_type: 'new-ins',image_url: 'https://clothing-images1.s3.amazonaws.com/underwear.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/underwear2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/underwear2.png', popularity: 0.0, date_arrived: '2020-12-5'})
 Product.create({name: 'Trainers', price: 100.00, description: 'These trainers are part of our new arrivals', filter_description: "outdoors", colour: 'white', size: "m",
                 collection_type: 'new-ins',image_url: 'https://clothing-images1.s3.amazonaws.com/trainers.png', image_url2: 'https://clothing-images1.s3.amazonaws.com/trainers2.png', image_url3: 'https://clothing-images1.s3.amazonaws.com/trainers3.png', popularity: 0.0, date_arrived: '2020-12-5'})
