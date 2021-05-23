@@ -1,0 +1,134 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.html {
+	font-family: sans-serif !important;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100% !important;
+}
+
+.search-bar {
+	z-index: 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(189, 187, 187);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 140px;
+    h4 {
+        padding-left: 25px;
+        padding-bottom: 0px;
+    }
+}
+
+.sidenav a {
+    padding: 0px 0px 0px 35px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #eeeeee;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.solid-line {
+    color: #3f3d3d;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.menu-button-group {
+    padding-top: 18px;
+    padding-right: 45px;
+    padding-left: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.menu-btn-main {
+    padding-left: 15px;
+}
+
+.menu-btn-saved { 
+    padding-right: 15px;
+    padding-left: 300px;
+}
+
+body {
+    margin: 0;
+}
+  
+.navbar {
+    overflow: hidden;
+    background-color: rgb(218, 131, 131);
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0px !important;
+    position: fixed !important; 
+    display: flex;
+    justify-content: space-between;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.428571429;
+	min-height: 50px;
+}
+  
+.navbar a {
+    float: left;
+    display: block;
+    color: #3f3d3d;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 17px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+  
+.navbar a:hover {
+    background: #f1f1f1;
+    color: rgb(255, 255, 255);
+}
+
+  
+.main {
+    padding: 16px;
+    margin-bottom: 30px;
+}
+
+// ------------
+
+* {
+	border: 0;
+	padding: 0;
+}
+
+:root {
+	font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1920 - 320));
+}
+
+
+body, input {
+	color: #171717;
+}

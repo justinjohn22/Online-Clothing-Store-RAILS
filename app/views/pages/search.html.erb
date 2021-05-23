@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= stylesheet_link_tag 'collection_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+    <h3>Search Result</h3>
+    <div class="items-container">
+        <% @results.each do |product| %>
+        <div class="images-for-collection">
+            <%= link_to image_tag(product.image_url, width: '150px', height: '180px', class: 'image-fit'), details_path(:id => product.id)%>
+            <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
+            <input type="checkbox">
+            <% end %>
+
+            <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
+            <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
+            <% end %>
+        </div>
+        <% end %>
+    </div>
+</body>
+
+</html>

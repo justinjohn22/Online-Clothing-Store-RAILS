@@ -1,14 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>RADAssignment</title>
+    <title>RAD Assignment</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
+  
   <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <h4> <b> Shop </b> </h4> <br>
+      <a href="#"><%= link_to "Men", '/products/men' %></a>
+      <a href="#"><%= link_to "Women", '/products/women'%></a>
+      <a href="#"> <%= link_to "Kids", '/products/kids' %></a>
+      <a href="#"> <%= link_to "New-ins", '/products/newins' %></a> 
+      <hr class="solid-line">
+      <a href="#"> <%= link_to "Saved List", saved_list_path(@current_saved_list) %></a>
+    </div>
+
+    <div class="menu-button-group">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      <div class='search-bar'>
+        <%= form_tag(search_page_path, :method => "get",   
+            class: 'navbar-form navbar-left') do %>  
+          <div class="input-group">  
+            <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+            <div class="input-group-btn">  
+              <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+            </div>  
+          </div>  
+        <% end %>
+      </div>
+      <% if logged_in? %>
+        <%= link_to bag_path do%>
+         <span class="glyphicon glyphicon-shopping-cart"> </span>
+        <% end %>
+      <% else %>
+        <%= link_to logon_path do%>
+          <span class="glyphicon glyphicon-shopping-cart"> </span>
+        <% end %>
+      <% end %>
+
+    </div>
+    
+    
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+
     <%= yield %>
+
+    <div class="navbar">
+      <a href="/">home</a>
+      <a href="#news">scan</a>
+      <%= link_to "saved list", saved_list_path(@current_saved_list) %>
+      <%if logged_in? %>
+        <%= link_to "account", logged_account_path(@current_customer) %>
+      <%else%>
+        <%= link_to "account", logon_path %>
+      <%end%>
+    </div>
+
   </body>
 </html>

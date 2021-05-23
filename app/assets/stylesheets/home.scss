@@ -1,0 +1,178 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.body {
+    background-color: rgba(238, 239, 240, 0.801);
+    padding-bottom: 100px;
+}
+
+.title-container p {
+    padding: 15px; 
+    text-align: center;
+    font-size: x-large;         
+}
+
+.slide-show {
+   padding: 15px;
+   position: relative;
+   text-align: center;
+}
+
+.slide-show-text {
+    position: absolute;
+    bottom: 100px;
+    left: 45px;
+    text-align: left;
+    color: white;
+   
+    p {
+        font-size: 40px;
+        text-shadow: black 0.1em 0.1em 0.2em
+    }
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.round-button {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    display: inline-block;
+    line-height: initial !important;
+    font-size: 50px;
+    text-align: center;
+    box-shadow:
+    0 0 2px 2px rgb(196, 193, 193),  /* inner white */
+    0 0 2px 2px rgb(153, 147, 153), /* middle magenta */
+    0 0 4px 4px rgb(204, 209, 209); /* outer cyan */
+    
+}
+
+.images-slide-show {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+
+.fit-image {
+    object-fit: cover;
+}
+
+.text-field-newsletter {
+    border: none;
+    width: fit-content;
+}
+
+.see-all-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    h3 {
+        margin: 0;
+    }
+
+}
+
+.popular-container {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+.popular {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding: 20px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    // box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
+    
+    input[type="checkbox"] { /* change "blue" browser chrome to yellow */
+        position: absolute;
+        filter: invert(455%) hue-rotate(293deg) brightness(1);
+        transform: translate(-25px, 150px) scale(1.8);
+        
+    }
+}
+
+.image-popular {
+    padding-left: 10px;
+    padding-right: 10px;
+   
+    p {
+        text-align: center;
+    }
+}
+
+
+
+
+.btn-1 {
+    color: black;
+    padding-top: 12px;
+    padding-bottom: 0px;
+}
+
+.btn_collection {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items:flex-end;
+    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    font-size: medium;
+    color: rgb(108, 112, 112);
+}
+
+.btn_newins {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items:flex-end;
+    box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    font-size: medium;
+    color: rgb(108, 112, 112);
+}
+
+
+hr.solid {
+    border-top: 2px solid #bbb;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.grid-for-buttons {
+    padding: 15px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px 15px;
+    grid-template-areas:
+        "Women Women"
+        "Men Newins"
+        "kids Newins";
+}
+
+.Women { grid-area: Women; }
+.Men { grid-area: Men; }
+.kids { grid-area: kids; }
+.Newins { grid-area: Newins; }
+
+.footer-home {
+    padding: 25px;
+}

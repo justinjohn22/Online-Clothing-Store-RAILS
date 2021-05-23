@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <%= stylesheet_link_tag 'log_on', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <div class="heading">
+    <p id="fashion"> <b>Fashion+ </b></p>
+    <p id="sentence">Quality is not an act, it is a habit.</p>
+    <hr class="solid">  
+  </div>
+
+  
+
+  <body>
+    <div class="grid-container">
+        <div class="login"> 
+            <b> <%=link_to "Login", login_page_path, :class => "login-btn" %></b>  <br>
+            <b> <%= link_to "Login with Twitter", "auth/twitter", method: :post, class: "twitter-btn" %> </b><br> 
+            <hr class="solidLine"> <br>  
+            <%= link_to "New to us? Sign up!", signup_path, class: "signup-btn" %>
+        </div>
+    </div>
+
+  </body>
+
+</html>
+
+
+
+
+
+

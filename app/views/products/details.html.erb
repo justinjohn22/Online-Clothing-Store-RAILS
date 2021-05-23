@@ -1,0 +1,75 @@
+<div class="slides">
+    <div> <%= image_tag(@product.image_url, width: '200px', height: '200px')  %> </div>
+    <div> <%= image_tag(@product.image_url2, width: '200px', height: '200px') %> </div>
+    <div> <%= image_tag(@product.image_url3, width: '200px', height: '200px') %> </div>
+</div>
+<style>
+    .slides {
+        display: flex;
+    }
+
+    .slides>div {
+        display: flex;
+    }
+
+    .slides {
+        overflow-x: auto;
+    }
+
+    .slides>div {
+        flex-shrink: 0;
+        width: 100%;
+        height: 300px;
+    }
+
+    .slides {
+        scroll-snap-type: x mandatory;
+    }
+
+    .slides>div {
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
+    }
+
+    .slides>div {
+        background: #74ABE2;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+    }
+</style>
+
+<h3>
+    <%= @product.name %>
+</h3>
+<p>
+    Description:
+    <%= @product.description %>
+</p>
+<p>
+    Price:
+    $<%= @product.price %>
+</p>
+
+<!--Temporary for now-->
+<% if logged_in? %>
+<%= form_for(@order_item) do |f| %>
+<%= f.hidden_field :product_id, :value => @product.id, :min => 1 %>
+<p>Size</p>
+<%= f.select :size , raw("<option>S</option><option>M</option><option>L</option><option>XL</option>") %>
+<p>Colour</p>
+<%= f.select :color, raw("<option>Yellow</option><option>White</option><option>Black</option><option>Purple</option><option>Green</option><option>Red</option><option>Blue</option>") %>
+<p>Quantity</p>
+<%= f.number_field :quantity, :value => 1, :min => 1 %>
+<%= f.hidden_field :customer_id, :value => @customer.id%>
+<%= f.submit "Add to Cart" %>
+<% end %>
+<% else %>
+<p>Size</p>
+<%= select_tag "size" , raw("<option>S</option><option>M</option><option>L</option><option>XL</option>") %>
+<p>Colour</p>
+<%= select_tag "color", raw("<option>Yellow</option><option>White</option><option>Black</option><option>Purple</option><option>Green</option><option>Red</option><option>Blue</option>") %>
+<p>Quantity</p>
+<%= number_field_tag "quantity" %>
+<%= button_to "Add to Cart", logon_path %>
+<% end %>

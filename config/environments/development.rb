@@ -45,6 +45,17 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  config.assets.precompile += ['home.scss']
+  config.assets.precompile += ['home.js']
+
+  config.assets.precompile += ['collection_pages.scss']
+  config.assets.precompile += ['collection_pages.js']
+  config.assets.precompile += ['customer_logged.scss']
+  config.assets.precompile += ['log_on.scss']
+  
+  config.assets.precompile += ['products.scss']
+  config.assets.precompile += ['products.js']
+ 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

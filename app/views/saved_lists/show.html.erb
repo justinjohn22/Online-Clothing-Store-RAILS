@@ -1,10 +1,24 @@
-<h2>Saved List</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= stylesheet_link_tag  'collection_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag '', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  </head>
 
-<% @saved_list.saved_items.each do |saved_item| %> 
- <div>
-    <%= image_tag(saved_item.product.image_url, width: '100px', height: '200px') %>
-  </div>
-  <div>
-    <p>Name: <%= saved_item.product.name %>; unit price of <%= number_to_currency(saved_item.product.price) %></p>
-  </div>
-<% end%>
+  <body>
+    <h3> <b> SAVED LIST </b> </h3>
+    <div class="items-container"> 
+      <% @saved_list.saved_items.each do |saved_item| %>
+        <div id="images-for-collection" >
+          <%= link_to image_tag(saved_item.product.image_url, width: '150px', height: '180px', class: 'image-fit'), details_path(:id => saved_item.product_id)%>
+          <%= link_to details_path(:id => saved_item.product_id) do %>
+                <p><b><%= saved_item.product.name %></b> <br> <%=  number_to_currency(saved_item.product.price) %></p>
+          <% end %>
+        </div>
+      <% end%>
+    </div>
+  </body>
+
+</html>
+

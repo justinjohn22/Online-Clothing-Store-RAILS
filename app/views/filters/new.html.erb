@@ -1,0 +1,48 @@
+<%= form_for(@filter) do |f| %>
+    <p>Collections</p>
+    <%= f.label :all %>
+    <%= f.check_box :all %>
+    <%= f.label :outdoors %>
+    <%= f.check_box :outdoors %>
+    <%= f.label :underwear %>
+    <%= f.check_box :underwear %>
+    <%= f.label :formal %>
+    <%= f.check_box :formal %>
+    <%= f.label :summer %>
+    <%= f.check_box :summer %>
+    <%= f.label :indoors %>
+    <%= f.check_box :indoors %>
+
+    <p>Colours</p>
+    <%= f.label :grey %>
+    <%= f.check_box :grey %>
+    <%= f.label :red %>
+    <%= f.check_box :red %>
+    <%= f.label :brown %>
+    <%= f.check_box :brown %>
+    <%= f.label :blue %>
+    <%= f.check_box :blue %>
+    <%= f.label :red %>
+    <%= f.check_box :red %>
+    <%= f.label :green %>
+    <%= f.check_box :green %>
+    <%= f.label :black %>
+    <%= f.check_box :black %>
+    <%= f.label :white %>
+    <%= f.check_box :white %>
+
+    <p>Sizes</p>
+    <%= f.label :size %><br />
+    <%= f.label :size, "s", :value => "s"  %>
+    <%= f.radio_button :size, "s" %>
+    <%= f.label :size, "m", :value => "m"  %>
+    <%= f.radio_button :size, "m" %>
+    <%= f.label :size, "l", :value => "l"  %>
+    <%= f.radio_button :size, "l" %>
+    <%= f.label :size, "xl", :value => "xl"  %>
+    <%= f.radio_button :size, "xl" %>
+    <%= f.label :size, "xxl", :value => "xxl"  %>
+    <%= f.radio_button :size, "xxl" %>
+    <%= f.submit "Submit"%>
+
+<% end %>

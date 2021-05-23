@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <h2>Bag</h2>
+  <body>
+    <p><%@order_items.length %></p>
+      <% @order_items.each do |item| %>
+        <h4><%= item.product.name %></h4>
+        <%= image_tag(item.product.image_url, width: '200px', height: '200px') %>
+        <h4><%= item.product.price %></h4>
+        <p>Quantity: <%= item.quantity %></p>
+        <p>Size: <%= item.size %></p>
+        <p>Color: <%= item.color %></p>
+        <h3>Subtotal: $<%= item.total %></h3>
+      <% end %>
+
+      <h3>Total: $<%= current_order.subtotal %></h3>
+      <%= button_to "Check Out", clear_bag_path %>
+  </body>
+</html>
+
