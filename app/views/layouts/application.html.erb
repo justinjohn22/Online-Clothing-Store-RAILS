@@ -55,15 +55,15 @@
 
     <%= yield %>
 
-    <div class="navbar">
-      <a href="/">home</a>
-      <a href="#news">scan</a>
-      <%= link_to "saved list", saved_list_path(@current_saved_list) %>
+    <div class="navbar"> <b>
+      <a href="/">HOME</a>
+      <a href="#news">SCAN</a>
+      <%= link_to "SAVED LIST", saved_list_path(@current_saved_list) %>
       <%if logged_in? %>
-        <%= link_to "account", logged_account_path(@current_customer) %>
+        <%= link_to "ACCOUNT", logged_account_path(@current_customer) %>
       <%else%>
-        <%= link_to "account", logon_path %>
-      <%end%>
+        <%= link_to "ACCOUNT", logon_path %>
+      <%end%> </b>
     </div>
 
   </body>

@@ -9,6 +9,8 @@
 
 .search-bar {
   z-index: 0;
+  padding-left: 80px;
+  padding-right: 12px;
 }
 
 .sidenav {
@@ -86,7 +88,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: rgb(218, 131, 131);
+  background-color: #9c9c9c;
   bottom: 0;
   width: 100%;
   margin-bottom: 0px !important;
@@ -96,16 +98,17 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.428571429;
   min-height: 50px;
+  color: #eeeeee;
 }
 
 .navbar a {
   float: left;
   display: block;
-  color: #3f3d3d;
+  color: #fdfdfd;
   text-align: center;
   padding: 14px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 13px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
