@@ -1,59 +1,57 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.items-container { 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-auto-flow: row;
-    row-gap: 20px;
-    column-gap: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 100%;
-    justify-content: center;
-    position: relative;
-
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-flow: row;
+  row-gap: 20px;
+  column-gap: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 100%;
+  justify-content: center;
+  position: relative;
 }
 
 h3 {
-    padding-bottom: 10px;
-    text-align: center;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .test {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-auto-flow: row;
-    row-gap: 20px;
-    column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-flow: row;
+  row-gap: 20px;
+  column-gap: 20px;
 }
 
 #images-for-collection {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: min-content; 
+  padding-left: 10px;
+  padding-right: 10px;
+  width: min-content;
 
-    p {
-        text-align: center !important;
-        color: black !important;
-        font-family: Arial, Helvetica, sans-serif !important;
-    }
+  p {
+    text-align: center !important;
+    color: black !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
 }
 
-input[type="checkbox"] { /* change "blue" browser chrome to yellow */
-    position: absolute;
-    filter: invert(455%) hue-rotate(293deg) brightness(1);
-    transform: translate(-25px, 150px) scale(1.8);
-  }
-
-  
+input[type="checkbox"] {
+  /* change "blue" browser chrome to yellow */
+  position: absolute;
+  filter: invert(455%) hue-rotate(293deg) brightness(1);
+  transform: translate(-25px, 150px) scale(1.8);
+}
 
 .image-fit {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .image-fit-inside {
-    object-fit: cover;
-    position: absolute;
-    transform: translate(-25px, 150px);
+  object-fit: cover;
+  position: absolute;
+  transform: translate(-25px, 150px);
 }
