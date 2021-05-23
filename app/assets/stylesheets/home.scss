@@ -93,6 +93,13 @@
     padding-top: 5px;
     box-sizing: border-box;
     // box-shadow: 0px 0px 10px 3px rgb(181, 187, 187);
+    
+    input[type="checkbox"] { /* change "blue" browser chrome to yellow */
+        position: absolute;
+        filter: invert(455%) hue-rotate(293deg) brightness(1);
+        transform: translate(-25px, 150px) scale(1.8);
+        
+    }
 }
 
 .image-popular {
@@ -103,6 +110,8 @@
         text-align: center;
     }
 }
+
+
 
 
 .btn-1 {

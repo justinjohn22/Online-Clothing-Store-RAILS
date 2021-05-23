@@ -49,6 +49,7 @@ Rails.application.configure do
   config.assets.precompile += ['home.js']
 
   config.assets.precompile += ['collection_pages.scss']
+  config.assets.precompile += ['collection_pages.js']
   config.assets.precompile += ['customer_logged.scss']
   config.assets.precompile += ['log_on.scss']
   

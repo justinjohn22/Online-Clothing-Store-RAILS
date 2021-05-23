@@ -4,6 +4,7 @@
 <head>
 
     <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'collection_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'home', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -42,11 +43,11 @@
             <% @popular_products.each do |product| %>
             <div>
                 <div class="image-popular">
-                    <%=link_to image_tag(product.image_url, width: '200px', height: '250px', class: 'fit-image'), saved_items_path(:product_id => product.id), method: :post %>
+                    <%= link_to image_tag(product.image_url, width: '150px', height: '180px', class: 'image-fit'), details_path(:id => product.id)%>
                     <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
                     <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
+                    <% end %>
                 </div>
-                <% end %>
             </div>
             <% end%>
         </div>
@@ -54,7 +55,7 @@
     <br>
 
     <hr class="solid">
-    
+
     <div>
         <div class="see-all-container">
             <h3>Collections</h3>
@@ -63,7 +64,7 @@
         <div class="grid-for-buttons">
             <div class="grid-container">
                 <div class="Women">
-                   <b> <%=link_to "women", '/products/women', :class => "btn_collection" %></b>     
+                    <b> <%=link_to "women", '/products/women', :class => "btn_collection" %></b>
                 </div>
                 <div class="Men">
                     <b> <%= link_to "men", '/products/men',:class => "btn_collection" %> </b>
@@ -105,8 +106,8 @@
         </p>
         <% end %>
     </div>
-    
-    <div class="footer-home"> 
+
+    <div class="footer-home">
     </div>
 
 </body>

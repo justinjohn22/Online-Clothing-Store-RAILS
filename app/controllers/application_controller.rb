@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
       @results = Product.all.where("lower(filter_description) LIKE '%#{@parameter}%'")
     end  
   end
-
+  
   private 
      def current_saved_list
       if session[:saved_list_id]
