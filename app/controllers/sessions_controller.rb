@@ -17,4 +17,9 @@ class SessionsController < ApplicationController
     log_out
     redirect_to root_url
   end
+
+  def destroy_filter
+    filter_out
+    redirect_to all_path
+  end
 end

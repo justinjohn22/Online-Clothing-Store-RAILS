@@ -8,6 +8,8 @@
 
   <body>
     <h3> <b> MEN </b> </h3>
+    <%= link_to "Filter",  filtering_path%>
+    <%= link_to "Remove Filter", filterout_path, method: "delete"%>
     <div class="items-container"> 
       <% @products.each do |product| %>
         <div id="images-for-collection" >

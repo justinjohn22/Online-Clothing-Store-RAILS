@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'logon'  => 'pages#log_on'
   post 'logon' => 'pages#log_on'
   #Collection re-directed pages
-  get 'products/index'
+  get 'products/index' => 'products#index', as: 'all'
   get 'products/new'
   get 'products/edit'
   get 'products/women'
@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   get 'products/newins'
   get 'products/details' => 'products#details', as: 'details'
   
-  post 'products/filter' => 'products#filter', as: 'filter'
-  get  'products/filter' => 'products#filter', as: 'get_filter'
+  post 'filtering' => 'filters#new'
+  get 'filtering' => 'filters#new'
 
   get 'saved_lists/:id' => 'saved_lists#show', as: 'saved_list'
   delete 'saved_lists/:id' => 'saved_lists#destroy'
@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   post 'login_page' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+  delete 'filterout' => 'sessions#destroy_filter'
 
   get 'bag' => 'bags#show'
   post 'bag' => 'bags#show' 
@@ -51,6 +52,7 @@ Rails.application.routes.draw do
   resources :order_items
   resources :products
   resources :customers
+  resources :filters
 
   get "/auth/twitter/callback" => "omniauth_callbacks#twitter"
 end

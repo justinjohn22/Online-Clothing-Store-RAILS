@@ -3,6 +3,10 @@ module SessionsHelper
     session[:customer_id] = customer.id
   end
 
+  def filter_on(filter)
+    session[:filter_id] = filter.id
+  end
+
   # Remembers a user in a persistent session.
   def remember(customer)
     customer.remember
@@ -18,8 +22,21 @@ module SessionsHelper
     @current_customer ||= Customer.find_by(id: session[:customer_id])
   end
 
+  def current_filter
+    @current_filter ||= Filter.find_by(id: session[:filter_id])
+  end
+  
   def logged_in?
     !current_customer.nil?
+  end
+
+  def filter_is_on?
+    !current_filter.nil?
+  end
+  
+  def filter_out
+    session.delete(:filter_id)
+    @current_filter = nil
   end
 
   def log_out

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210520043534) do
+ActiveRecord::Schema.define(version: 20210522132635) do
 
   create_table "bags", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -25,6 +25,25 @@ ActiveRecord::Schema.define(version: 20210520043534) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.index ["email"], name: "index_customers_on_email", unique: true
+  end
+
+  create_table "filters", force: :cascade do |t|
+    t.boolean "all"
+    t.boolean "outdoors"
+    t.boolean "underwear"
+    t.boolean "formal"
+    t.boolean "summer"
+    t.boolean "indoors"
+    t.boolean "grey"
+    t.boolean "red"
+    t.boolean "brown"
+    t.boolean "blue"
+    t.boolean "green"
+    t.boolean "black"
+    t.boolean "white"
+    t.string "size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "order_items", force: :cascade do |t|
@@ -54,6 +73,7 @@ ActiveRecord::Schema.define(version: 20210520043534) do
     t.string "filter_description"
     t.string "colour"
     t.string "size"
+    t.string "category"
     t.string "collection_type"
     t.string "image_url"
     t.string "image_url2"
