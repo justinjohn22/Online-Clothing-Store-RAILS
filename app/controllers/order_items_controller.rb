@@ -7,6 +7,7 @@ class OrderItemsController < ApplicationController
     @order_item.product.increment!(:popularity, 1)
     @order.save
     session[:order_id] = @order.id
+    redirect_to root_path
   end
 
   private

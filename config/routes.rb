@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'logon'  => 'pages#log_on'
   post 'logon' => 'pages#log_on'
+  
+  post 'redirection' => 'ratings#redirect'
+
   #Collection re-directed pages
   get 'products/index' => 'products#index', as: 'all'
   get 'products/new'
@@ -44,6 +47,8 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   delete 'filterout' => 'sessions#destroy_filter'
+
+  get 'rating' => 'ratings#new'
 
   get 'bag' => 'bags#show'
   post 'bag' => 'bags#show' 

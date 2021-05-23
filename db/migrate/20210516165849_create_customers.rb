@@ -4,6 +4,7 @@ class CreateCustomers < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :email
       t.boolean :subscription  
+      t.boolean :given_rating
       t.timestamps
     end
   end

@@ -120,7 +120,6 @@ class ProductsController < ApplicationController
   def details
     @product = Product.find(params[:id])
     @order_item = current_order.order_items.new
-    @customer = current_customer
   end
 
   def women
