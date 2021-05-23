@@ -1,3 +1,9 @@
+<!--
+[4]"Ruby on Rails Tutorial 2nd Edition", Softcover.io, 2021. [Online].
+Available: https://rails-3-2.railstutorial.org/book/updating_and_deleting_users 
+[Accessed: 23- May- 2021] 
+-->
+
 <form accept-charset="UTF-8" action="/customers/1" class="edit_customer"
       id="edit_customer_1" method="post">
   <input name="_method" type="hidden" value="patch" />
@@ -23,10 +29,7 @@
 
             <%= f.submit "Save changes", class: "btn btn-primary" %>
             <% end %>
-
-            <div class="gravatar_edit">
-            <%= gravatar_for @customer %>
-            <a href="http://gravatar.com/emails" target="_blank">change</a>
+           
             </div>
         </div>
         </div>

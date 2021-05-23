@@ -19,6 +19,12 @@
 
     <div class="slide-show">
 
+<!-- Adding button over image slide show 
+    [14]"How To Position Text Over an Image", W3schools.com, 2021. 
+    [Online]. Available: https://www.w3schools.com/howto/howto_css_image_text.asp. 
+    [Accessed: 23- May- 2021]
+-->
+
         <%= link_to image_tag(@random_product.image_url, :class => "slide-show-image", class: 'images-slide-show'), details_path(:id => @random_product.id)%>
         <%= link_to details_path(:id => @random_product.id) do %>
         <div class="slide-show-div">
@@ -39,6 +45,12 @@
                 <%= link_to "see all+", all_path, :class => "btn-1" %>
             </p>
         </div>
+
+<!-- image overflow - side scroll
+        [13]"CSS overflow-x property", W3schools.com, 2021. [Online].
+        Available: https://www.w3schools.com/cssref/css3_pr_overflow-x.asp 
+        [Accessed: 23- May- 2021]      
+-->
         <div class="popular">
             <% @popular_products.each do |product| %>
             <div>
@@ -61,6 +73,11 @@
             <h3>Collections</h3>
             <p> <%= link_to "see all+", all_path, :class => "btn-1" %> </p>
         </div>
+
+<!--    Grid layout 
+        [15]"Layoutit Grid — CSS Grids layouts made easy!", Grid.layoutit.com, 2021. [Online].
+        Available: https://grid.layoutit.com/ [Accessed: 23- May- 2021]
+-->        
         <div class="grid-for-buttons">
             <div class="grid-container">
                 <div class="Women">
@@ -81,6 +98,12 @@
 
     </div>
     <br>
+    
+<!-- Newsletter
+    [15]Sendgrid.com, 2021. [Online]. 
+    Available: https://sendgrid.com/docs/for-developers/sending-email/rubyonrails/ 
+    [Accessed: 23- May- 2021]
+-->
     <div class="news-letter">
         <div class="see-all-container">
             <h3>Newsletter</h3>

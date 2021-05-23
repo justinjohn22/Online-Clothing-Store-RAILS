@@ -11,6 +11,12 @@
 
   
   <body>
+  
+  <!-- Side navigation 
+    [2]"How To Create a Side Navigation Menu", W3schools.com, 2021. [Online].
+    Available: https://www.w3schools.com/howto/howto_js_sidenav.asp 
+    [Accessed: 5- May- 2021] 
+  -->
 
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -23,6 +29,12 @@
       <a href="#"> <%= link_to "Saved List", saved_list_path(@current_saved_list) %></a>
     </div>
 
+<!-- Searh bar 
+  [8]M. Ch'ng, "Chapter 4. Search Feature · Ruby On Rails Tutorial", 
+  Melvinchng.github.io, 2021. [Online]. Available:
+  https://melvinchng.github.io/rails/SearchFeature.html#chapter-4-search-feature 
+  [Accessed: 23- May- 2021]
+-->
     <div class="menu-button-group">
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
       <div class='search-bar'>
@@ -54,6 +66,12 @@
     <% end %>
 
     <%= yield %>
+
+<!-- Bottom Navigation Menu
+  [9]"How To Create a Bottom Navigation Menu", W3schools.com, 2021. [Online]. 
+  Available: https://www.w3schools.com/howto/howto_css_bottom_nav.asp
+  [Accessed: 23- May- 2021]
+-->
 
     <div class="navbar"> <b>
       <a href="/">HOME</a>
