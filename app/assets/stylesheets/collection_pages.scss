@@ -45,10 +45,7 @@ h3 {
 }
 
 input[type="checkbox"] {
-  /* change "blue" browser chrome to yellow */
-  position: absolute;
   filter: invert(455%) hue-rotate(293deg) brightness(1);
-  transform: translate(60px, -100px) scale(1.8);
 }
 
 .image-fit {

@@ -1,37 +1,38 @@
+<%= stylesheet_link_tag  'collection_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= form_for(@filter) do |f| %>
-    <p>Collections</p>
-    <%= f.label :all %>
-    <%= f.check_box :all %>
+    <h3>Collections</h3>
+    <%= f.label :all %> 
+    <%= f.check_box :all %> &nbsp;
     <%= f.label :outdoors %>
-    <%= f.check_box :outdoors %>
+    <%= f.check_box :outdoors %> &nbsp;
     <%= f.label :underwear %>
-    <%= f.check_box :underwear %>
+    <%= f.check_box :underwear %> &nbsp;
     <%= f.label :formal %>
-    <%= f.check_box :formal %>
+    <%= f.check_box :formal %> &nbsp;
     <%= f.label :summer %>
-    <%= f.check_box :summer %>
+    <%= f.check_box :summer %> &nbsp;
     <%= f.label :indoors %>
-    <%= f.check_box :indoors %>
+    <%= f.check_box :indoors %> &nbsp;
 
-    <p>Colours</p>
+    <h3>Colours</h3>
     <%= f.label :grey %>
-    <%= f.check_box :grey %>
+    <%= f.check_box :grey %> &nbsp;
     <%= f.label :red %>
-    <%= f.check_box :red %>
+    <%= f.check_box :red %> &nbsp;
     <%= f.label :brown %>
-    <%= f.check_box :brown %>
+    <%= f.check_box :brown %> &nbsp;
     <%= f.label :blue %>
-    <%= f.check_box :blue %>
+    <%= f.check_box :blue %> &nbsp;
     <%= f.label :red %>
-    <%= f.check_box :red %>
+    <%= f.check_box :red %> &nbsp;
     <%= f.label :green %>
-    <%= f.check_box :green %>
+    <%= f.check_box :green %> &nbsp;
     <%= f.label :black %>
-    <%= f.check_box :black %>
+    <%= f.check_box :black %> &nbsp;
     <%= f.label :white %>
-    <%= f.check_box :white %>
+    <%= f.check_box :white %> &nbsp;
 
-    <p>Sizes</p>
+    <h3>Sizes</h3> 
     <%= f.label :size %><br />
     <%= f.label :size, "s", :value => "s"  %>
     <%= f.radio_button :size, "s" %>
