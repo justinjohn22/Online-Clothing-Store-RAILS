@@ -37,13 +37,18 @@ h3 {
     color: black !important;
     font-family: Arial, Helvetica, sans-serif !important;
   }
+  form.button_to {
+    position: absolute;
+    filter: invert(455%) hue-rotate(293deg) brightness(1);
+    transform: translate(120px, -40px) scale(1);
+  }
 }
 
 input[type="checkbox"] {
   /* change "blue" browser chrome to yellow */
   position: absolute;
   filter: invert(455%) hue-rotate(293deg) brightness(1);
-  transform: translate(-25px, 150px) scale(1.8);
+  transform: translate(60px, -100px) scale(1.8);
 }
 
 .image-fit {
