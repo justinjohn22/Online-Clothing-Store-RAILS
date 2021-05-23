@@ -40,14 +40,14 @@
         </div>
         <div class="popular">
             <% @popular_products.each do |product| %>
-            <div>
-                <div class="image-popular">
-                    <%=link_to image_tag(product.image_url, width: '200px', height: '250px', class: 'fit-image'), saved_items_path(:product_id => product.id), method: :post %>
-                    <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
-                    <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
+                <div>
+                    <div class="image-popular">
+                        <%= link_to image_tag(product.image_url, width: '150px', height: '180px', class: 'image-fit'), details_path(:id => product.id)%>
+                        <%= link_to  saved_items_path(:product_id => product.id), method: :post do %>
+                                <p><b><%= product.name %></b> <br> <%= number_to_currency(product.price) %></p>
+                        <% end %>
+                    </div>
                 </div>
-                <% end %>
-            </div>
             <% end%>
         </div>
     </div>

@@ -11,6 +11,7 @@
     padding-left: 10px;
     padding-bottom: 100%;
     justify-content: center;
+    position: relative;
 
 }
 
@@ -39,7 +40,20 @@ h3 {
     }
 }
 
+input[type="checkbox"] { /* change "blue" browser chrome to yellow */
+    position: absolute;
+    filter: invert(455%) hue-rotate(293deg) brightness(1);
+    transform: translate(-25px, 150px) scale(1.8);
+  }
+
+  
 
 .image-fit {
     object-fit: cover;
+}
+
+.image-fit-inside {
+    object-fit: cover;
+    position: absolute;
+    transform: translate(-25px, 150px);
 }
