@@ -23,12 +23,12 @@
       </div>
 
       <div class="profile-btn">
-          <%= link_to "subscription", subscription_path(@customer), method: :post %>
+          <%= button_to "subscription", subscription_path(@customer), method: :post %>
       </div>
 
      <div class="profile-btn">
         <% if logged_in? %>
-          <%= link_to "Log out", logout_path, method: "delete" %>
+          <%= button_to "Log out", logout_path, method: "delete" %>
         <% end %>
       </div>
     </div>
