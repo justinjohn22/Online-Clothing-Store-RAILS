@@ -39,6 +39,7 @@ module SessionsHelper
     @current_filter = nil
   end
 
+  # [5]"Ruby on Rails Tutorial (3rd Ed.)", Softcover.io, 2021. [Online]. Available: https://3rd-edition.railstutorial.org/book/log_in_log_out [Accessed: 23- May- 2021] 
   def log_out
     session.delete(:customer_id)
     @current_customer = nil
