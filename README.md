@@ -1,7 +1,15 @@
 (1) Justin John - s3846390 (2) Muhib Hasan - s3850034
 80+
+Link to Heroku Page:
 https://quiet-atoll-36578.herokuapp.com/
-github
+
+How to run the app on Cloud 9/Local Installation
+
+    - bundle install --without production 
+    - rake db:migrate
+    - rake db:seed
+    - rails s
+
 
 Timesheet - initial commit 23 April
 Project started 2 days ago.
