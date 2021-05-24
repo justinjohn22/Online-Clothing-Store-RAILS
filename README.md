@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 Developers
 (1) Justin John - s3846390 - 50% contribution
 (2) Muhib Hasan - s3850034 - 50% contribution
 
 Highest Level Attempted
 80+
+=======
+(1) Justin John - s3846390 (2) Muhib Hasan - s3850034
+80+ 
+https://quiet-atoll-36578.herokuapp.com/
+
+>>>>>>> master
 
 Time Sheet for both Members - Peer Programming
 Timesheet - initial commit 23 April
