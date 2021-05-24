@@ -59,6 +59,6 @@ Rails.application.routes.draw do
   resources :customers
   resources :filters
 
-  get "/auth/twitter/callback" => "omniauth_callbacks#twitter"
+  post "/auth/twitter/callback" => "omniauth_callbacks#twitter"
 end
 
