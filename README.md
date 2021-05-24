@@ -1,7 +1,7 @@
 (1) Justin John - s3846390 (2) Muhib Hasan - s3850034
-80+
+80+ 50:50
 https://quiet-atoll-36578.herokuapp.com/
-github
+
 
 Timesheet - initial commit 23 April
 Project started 2 days ago.
