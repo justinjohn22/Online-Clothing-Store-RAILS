@@ -1,3 +1,5 @@
+--- TO BE VIEWED USING MOBILE VIEW ONLY ---
+Link -> https://quiet-atoll-36578.herokuapp.com/
 
 Developers
 (1) Justin John - s3846390 - 50% contribution
