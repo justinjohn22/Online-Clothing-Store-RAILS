@@ -1,54 +1,55 @@
 --- TO BE VIEWED USING MOBILE VIEW ONLY --- <br>
-Link -> https://quiet-atoll-36578.herokuapp.com/
+Link -> https://quiet-atoll-36578.herokuapp.com/ <br>
 
-Developers
-(1) Justin John - s3846390 - 50% contribution
-(2) Muhib Hasan - s3850034 - 50% contribution
+Developers <br>
+(1) Justin John - s3846390 - 50% contribution <br>
+(2) Muhib Hasan - s3850034 - 50% contribution <br>
+ 
+Highest Level Attempted <br>
+80+ <br>
 
-Highest Level Attempted
-80+
-
-Time Sheet for both Members - Peer Programming
-Timesheet - initial commit 23 April
-Day 1: Muhib & Justin 2.5 hours (peer programming)
-Day 2: Muhib & Justin 3 hours (peer programming)
-Day 3: Muhib & Justin 1.5 hours (peer programming)
-Day 4: Muhib: 2 hours, Justin 1.5 hours
-Day 5: Muhib & Justin 4 hours (peer programming)
-Day 6: Justin 2 hours
-Day 7: Muhib 2.5 hours
-Day 8: Muhib & Justin 20 mins hours (peer programming)
-Day 9:  
-Day 10: Muhib & Justin 1 hour (peer programming)
-Day 11: Muhib 1 hour
-Day 12: Justin 45 mins
-Day 13:
-Day 14: Muhib & Justin 1.5 (peer programming)
-Day 15:
-Day 16: Justin 1.5 hours, Muhib 2 hours
-Day 17: Muhib 2 hours, Justin 1.5 hours
-Day 19: Justin 2.5 hours, Muhib 2 hours
-Day 20: Muhib & Justin 4 hours (peer programming)
-Day 21: Muhib & Justin 4 hours (peer programming)
-
-
-Link to Heroku Page:
-https://quiet-atoll-36578.herokuapp.com/
+Time Sheet for both Members - Peer Programming  <br>
+Timesheet - initial commit 23 April <br>
+Day 1: Muhib & Justin 2.5 hours (peer programming) <br>
+Day 2: Muhib & Justin 3 hours (peer programming) <br>
+Day 3: Muhib & Justin 1.5 hours (peer programming) <br>
+Day 4: Muhib: 2 hours, Justin 1.5 hours <br>
+Day 5: Muhib & Justin 4 hours (peer programming) <br>
+Day 6: Justin 2 hours <br>
+Day 7: Muhib 2.5 hours <br>
+Day 8: Muhib & Justin 20 mins hours (peer programming) <br>
+Day 9:  <br>
+Day 10: Muhib & Justin 1 hour (peer programming) <br>
+Day 11: Muhib 1 hour <br>
+Day 12: Justin 45 mins <br>
+Day 13: <br>
+Day 14: Muhib & Justin 1.5 (peer programming) <br>
+Day 15: <br>
+Day 16: Justin 1.5 hours, Muhib 2 hours <br>
+Day 17: Muhib 2 hours, Justin 1.5 hours <br>
+Day 19: Justin 2.5 hours, Muhib 2 hours <br>
+Day 20: Muhib & Justin 4 hours (peer programming) <br>
+Day 21: Muhib & Justin 4 hours (peer programming) <br>
 
 
-How to run the app on Cloud 9/Local Installation
+Link to Heroku Page: <br>
+https://quiet-atoll-36578.herokuapp.com/ <br>
+
+
+How to run the app on Cloud 9/Local Installation <br>
 
     - bundle install --without production 
     - rake db:migrate
     - rake db:seed
     - rails s
 
-Note:
-    - Login With Twitter works locally but not on heroku
-    - You would have to return back to the log in page after exception of InvalidAuthencityToken and press it again and it should work
+Note: <br>
+    - Login With Twitter works locally but not on heroku <br>
+    - You would have to return back to the log in page after exception of InvalidAuthencityToken and press it again and it should work <br>
 
-Github Repo Name/Location:
-https://github.com/s3850034/RAD2021_s3846390_s3850034
+<h3> Main development github link </h3> 
+Github Repo Name/Location: <br>
+https://github.com/s3850034/RAD2021_s3846390_s3850034 <br> <br>
 
 Heroku Deployment Log:
 2021-05-24T01:49:05.784607+00:00 app[web.1]: I, [2021-05-24T01:49:05.784464 #4]  INFO -- : [18e9cdb1-57af-463d-9b0e-33e6e38ffde2] Started GET "/bag" for 120.148.77.119 at 2021-05-24 01:49:05 +0000
