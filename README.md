@@ -51,7 +51,7 @@ Note: <br>
 Github Repo Name/Location: <br>
 https://github.com/s3850034/RAD2021_s3846390_s3850034 <br> <br>
 
-Heroku Deployment Log:
+<b>Heroku Deployment Log: </b> <br>
 2021-05-24T01:49:05.784607+00:00 app[web.1]: I, [2021-05-24T01:49:05.784464 #4]  INFO -- : [18e9cdb1-57af-463d-9b0e-33e6e38ffde2] Started GET "/bag" for 120.148.77.119 at 2021-05-24 01:49:05 +0000
 2021-05-24T01:49:05.785918+00:00 app[web.1]: I, [2021-05-24T01:49:05.785823 #4]  INFO -- : [18e9cdb1-57af-463d-9b0e-33e6e38ffde2] Processing by BagsController#show as HTML
 2021-05-24T01:49:05.801150+00:00 app[web.1]: D, [2021-05-24T01:49:05.801003 #4] DEBUG -- : [18e9cdb1-57af-463d-9b0e-33e6e38ffde2]   SavedList Load (7.1ms)  SELECT  "saved_lists".* FROM "saved_lists" WHERE "saved_lists"."id" = $1 LIMIT $2  [["id", 40], ["LIMIT", 1]]
